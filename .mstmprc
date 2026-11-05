@@ -1,0 +1,43 @@
+# --- Defaults (Applied to all accounts) ---
+defaults
+auth           on
+tls            on
+tls_starttls   on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+# --- Studio Account ---
+account        studio
+host           mailcluster.loopia.se
+port           587
+from           studio@marcocueva.com
+user           studio@marcocueva.com
+passwordeval   "pass email/studio"
+
+# --- Combi Account ---
+account        Combi
+host           mailcluster.loopia.se
+port           587
+from           mail@marcocueva.com
+user           mail@marcocueva.com
+passwordeval   "pass email/mail_combi"
+
+# --- Inkorg Account ---
+account        Inkorg
+host           mailcluster.loopia.se
+port           587
+from           inkorg@marcocueva.com
+user           inkorg@marcocueva.com
+passwordeval   "pass email/inkorg"
+
+# --- Yahoo Account ---
+account yahoo
+host smtp.yahoo.com
+port 465
+from marco.cueva@yahoo.com
+user marco.cueva@yahoo.com
+passwordeval pass email/yahoo
+tls_starttls off
+
+# --- Set the default account for sending ---
+account default : studio
