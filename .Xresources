@@ -1,0 +1,136 @@
+! ==============================================================================
+!  URxvt Configuration (Gruvbox Dark, Modernized, No Paste Prompts)
+! ==============================================================================
+
+! --- Modern Rendering & Font Quality ---
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! --- Disable ALL Paste Confirmations ---
+URxvt.perl-ext: -confirm-paste
+URxvt.confirm-paste: false
+URxvt.pastable: true
+URxvt.pasta.confirm: false
+
+! --- Extensions (keeping pasta) ---
+URxvt.perl-lib: /home/marco/.urxvt/ext/
+URxvt.perl-ext-common: default,selection-to-clipboard,matcher,keyboard-select,font-size,pasta
+
+! --- URL Handling ---
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.underlineURLs: true
+URxvt.matcher.button: 1
+URxvt.saveLines: 16384
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+URxvt.url-select.button: 1
+URxvt.keysym.M-u: perl:url-select:select_next
+
+! --- Fonts ---
+URxvt.font: xft:FiraCode Nerd Font Mono:size=11
+!URxvt.font: xft:Hack Nerd Font Mono:size=11
+URxvt.italicFont: xft:Iosevka Nerd Font Mono:style=Italic:size=12
+URxvt.letterSpace: 0
+URxvt.allow_bold: true
+URxvt.skipBuiltinGlyphs: true
+
+! --- Window & Appearance ---
+URxvt.geometry: 120x54
+URxvt.internalBorder: 12
+URxvt.scrollBar: false
+URxvt.scrollstyle: plain
+
+! --- Transparency (handled by compositor) ---
+URxvt.depth: 32
+URxvt.background: [80]#1d2021
+URxvt.transparent: true
+URxvt.shading: 80
+
+! --- Clipboard & Selection ---
+URxvt.selectToClipboard: true
+URxvt.clipboard.autocopy: true
+
+! --- Modern Keybindings ---
+URxvt.keysym.C-S-c: eval:selection_to_clipboard
+URxvt.keysym.C-S-v: eval:paste_clipboard
+URxvt.keysym.Control-Insert:  eval:selection_to_clipboard
+URxvt.keysym.Shift-Insert:    eval:paste_clipboard
+
+! Font size control
+URxvt.keysym.C-Up:    font-size:increase
+URxvt.keysym.C-Down:  font-size:decrease
+URxvt.keysym.C-equal: font-size:reset
+
+! Word navigation (Alt+Left/Right)
+URxvt.keysym.M-Left:  \033[1;3D
+URxvt.keysym.M-Right: \033[1;3C
+
+! --- Performance Tweaks ---
+URxvt.jumpScroll: true
+URxvt.skipScroll: true
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! --- Disable Bells ---
+URxvt.urgentOnBell: false
+URxvt.visualBell: false
+
+! --- Gruvbox Dark Colors ---
+*background: #1d2021
+*foreground: #ebdbb2
+*cursorColor: #fb4934
+
+*color0:  #282828
+*color8:  #928374
+*color1:  #cc241d
+*color9:  #fb4934
+*color2:  #98971a
+*color10: #b8bb26
+*color3:  #d79921
+*color11: #fabd2f
+*color4:  #458588
+*color12: #83a598
+*color5:  #b16286
+*color13: #d3869b
+*color6:  #689d6a
+*color14: #8ec07c
+*color7:  #a89984
+*color15: #ebdbb2
+
+!-*- Xterm configuration 2025-03-27
+xterm*termName: xterm-256color
+Xterm*saveLines: 4096
+
+xterm*loginShell: true
+xterm*VT100.geometry: 240X76
+
+XTerm*selectToClipboard: true
+
+! font
+xterm*faceName: Hack Nerd Font
+xterm*faceSize: 11
+xterm*boldMode: false
+
+XTerm*rightScrollBar: false
+XTerm*ScrollBar: false
+
+XTerm*letterSpace: 1
+
+XTerm*scrollTtyOutput: false
+XTerm*VT100.Translations: #override
+      Shift Ctrl<Key>V: insert-selection(CLIPBOARD)
+      Shift Ctrl<Key>v: insert-selection(PRIMARY)
+      Shift<Btn1Down>: select-start()
+      Shift<Btn1Motion>: select-extend()
+      Shift<Btn1Up>: select-end(CLIPBOARD)
+
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+

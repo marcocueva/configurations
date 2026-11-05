@@ -90,6 +90,8 @@ function y() {
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+eval $(ssh-agent)
+
 # Zoxide (Directory navigation)
 if command -v zoxide 1>/dev/null 2>&1; then
     eval "$(zoxide init zsh --cmd j)"

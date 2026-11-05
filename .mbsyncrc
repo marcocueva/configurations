@@ -1,0 +1,114 @@
+##############################
+#   STUDIO (Loopia)
+##############################
+
+IMAPAccount studio
+Host mailcluster.loopia.se
+User studio@marcocueva.com
+PassCmd "pass email/studio"
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore studio-remote
+Account studio
+
+MaildirStore studio-local
+Path ~/.mail/studio/
+Inbox ~/.mail/studio/INBOX
+Subfolders Verbatim
+
+Channel studio
+Far :studio-remote:
+Near :studio-local:
+Patterns "INBOX" "Sent" "Junk"
+Create Both
+Expunge Both
+SyncState *
+MaxMessages 300
+
+
+##############################
+#   mail (Loopia)
+##############################
+
+IMAPAccount mail
+Host mailcluster.loopia.se
+User mail@marcocueva.com
+PassCmd "pass email/mail"
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore mail-remote
+Account mail
+
+MaildirStore mail-local
+Path ~/.mail/mail/
+Inbox ~/.mail/mail/INBOX
+Subfolders Verbatim
+
+Channel mail_mail
+Far :mail-remote:
+Near :mail-local:
+Patterns "INBOX" "Sent" "Junk"
+Create Both
+Expunge Both
+SyncState *
+MaxMessages 300
+
+
+##############################
+#   INKORG (Loopia)
+##############################
+
+IMAPAccount inkorg
+Host mailcluster.loopia.se
+User inkorg@marcocueva.com
+PassCmd "pass email/inkorg"
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore inkorg-remote
+Account inkorg
+
+MaildirStore inkorg-local
+Path ~/.mail/Inkorg/
+Inbox ~/.mail/Inkorg/INBOX
+Subfolders Verbatim
+
+Channel Inkorg
+Far :inkorg-remote:
+Near :inkorg-local:
+Patterns "INBOX" "Sent" "Junk"
+Create Both
+Expunge Both
+SyncState *
+MaxMessages 300
+
+
+
+##############################
+#   YAHOO — COMPATIBLE WITH 1.5.1
+##############################
+
+IMAPAccount yahoo
+Host imap.mail.yahoo.com
+User marco.cueva@yahoo.com
+PassCmd "pass email/yahoo"
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore yahoo-remote
+Account yahoo
+
+MaildirStore yahoo-local
+Path ~/.mail/yahoo/
+Inbox ~/.mail/yahoo/INBOX
+Subfolders Verbatim
+
+Channel yahoo
+Far :yahoo-remote:
+Near :yahoo-local:
+Patterns "INBOX" "Sent" "Bulk Mail"
+Create Both
+SyncState *
+MaxMessages 300

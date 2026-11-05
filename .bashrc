@@ -186,3 +186,7 @@ export PATH="$HOME/ltex-ls-16.0.0/bin/:$PATH"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+# this is a test
+eval "$(ssh-agent)"
+
