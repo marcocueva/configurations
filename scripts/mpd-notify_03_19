@@ -1,0 +1,199 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+notification_timeout=5000
+
+# Default locations
+music_base="$HOME/Music"
+cover_dir="$HOME/.cache/mpd_covers"
+ncmpcpp_cover="$HOME/.ncmpcpp/cover.jpg"
+default_cover="$HOME/.ncmpcpp/default_cover.jpg"
+
+###############################################
+# Helper functions
+###############################################
+
+error() {
+    logger -t "$(basename "$0")" "$*"
+    printf "%s\n" "$*" >&2
+}
+
+warning() {
+    logger -t "$(basename "$0")" "$*"
+}
+
+use_album_cover() {
+    local src="$1"
+
+    # Always copy default cover to trigger inotify
+    if [[ "$src" = "$default_cover" ]] || ! cmp --silent "$src" "$ncmpcpp_cover"; then
+        cp "$src" "$ncmpcpp_cover"
+    fi
+}
+
+send_notification() {
+    local artist="$1"
+    local title="$2"
+    local albumartist="$3"
+    local album="$4"
+    local year="$5"
+    local cover="$6"
+
+    [[ -n "$year" ]] && album="$album • $year"
+
+    notify-send \
+        --app-name MPD \
+        --urgency normal \
+        --expire-time="$notification_timeout" \
+        --transient \
+        --hint="int:transient:1" \
+        --hint="string:image-path:$cover" \
+        "$artist • $title" \
+        "$albumartist • $album"
+}
+
+###############################################
+# Parse arguments
+###############################################
+
+while getopts 'm:h' opt; do
+    case "$opt" in
+        m) music_base="$OPTARG" ;;
+        h)
+            echo "Usage: $(basename "$0") [-m music_dir]"
+            exit 0
+            ;;
+    esac
+done
+
+###############################################
+# Read metadata from MPD
+###############################################
+
+mapfile -td $'\t' meta < <(
+    mpc -f '%file%\t%artist%\t%title%\t%albumartist%\t%album%\t%date%\t%originaldate%' current
+)
+
+track_file="${meta[0]}"
+artist="${meta[1]}"
+title="${meta[2]}"
+albumartist="${meta[3]:-$artist}"
+album="${meta[4]:-Unknown Album}"
+year="${meta[6]:-${meta[5]:-}}"
+
+full_track_file="$music_base/$track_file"
+
+###############################################
+# Validate track file
+###############################################
+
+if [[ ! -r "$full_track_file" ]]; then
+    error "Track '$full_track_file' not found"
+    use_album_cover "$default_cover"
+    exit 1
+fi
+
+mkdir -p "$cover_dir"
+
+###############################################
+# Extract embedded cover art (robust version)
+###############################################
+
+mkdir -p "$cover_dir"
+extracted="$cover_dir/embedded.jpg"
+
+# Try extracting embedded art using ffmpeg
+if ffmpeg -loglevel error -y -i "$full_track_file" -an -vcodec copy "$extracted" 2>/dev/null; then
+    # Some formats store art as PNG; convert to JPG if needed
+    if file "$extracted" | grep -qi "PNG"; then
+        mogrify -format jpg "$extracted"
+        extracted="${extracted%.jpg}.jpg"
+    fi
+
+    # Check if extraction actually produced an image
+    if [[ -s "$extracted" ]]; then
+        chosen_cover="$extracted"
+    else
+        warning "Embedded art extraction produced empty file"
+        chosen_cover="$default_cover"
+    fi
+else
+    warning "No embedded art found in '$track_file'"
+    chosen_cover="$default_cover"
+fi
+
+use_album_cover "$chosen_cover"
+
+# -- ## --
+# -- ## --###############################################
+# -- ## --# Determine album directory
+# -- ## --###############################################
+# -- ## --
+# -- ## --slash_count="${track_file//[^\/]}"
+# -- ## --slash_count="${#slash_count}"
+# -- ## --
+# -- ## --cover_candidates=(
+# -- ## --    "cover.jpg" "cover.png" "cover.jpeg"
+# -- ## --    "Cover.jpg" "Cover.png" "Cover.jpeg"
+# -- ## --    "folder.jpg" "folder.png" "folder.jpeg"
+# -- ## --    "Folder.jpg" "Folder.png" "Folder.jpeg"
+# -- ## --    "front.jpg" "front.png" "front.jpeg"
+# -- ## --    "Front.jpg" "Front.png" "Front.jpeg"
+# -- ## --    "album.jpg" "album.png" "album.jpeg"
+# -- ## --)
+# -- ## --
+# -- ## --chosen_cover="$default_cover"
+# -- ## --
+# -- ## --###############################################
+# -- ## --# Case 1: Artist/Album/Track.ext
+# -- ## --###############################################
+# -- ## --
+# -- ## --if [[ "$slash_count" -eq 2 ]]; then
+# -- ## --    album_dir="$(dirname "$full_track_file")"
+# -- ## --
+# -- ## --    for candidate in "${cover_candidates[@]}"; do
+# -- ## --        if [[ -r "$album_dir/$candidate" ]]; then
+# -- ## --            chosen_cover="$album_dir/$candidate"
+# -- ## --            break
+# -- ## --        fi
+# -- ## --    done
+# -- ## --
+# -- ## --    # Optional embedded art extraction
+# -- ## --    # Uncomment to enable:
+# -- ## --    #
+# -- ## --    # extracted="$cover_dir/embedded.jpg"
+# -- ## --    # if ffmpeg -loglevel quiet -y -i "$full_track_file" "$extracted" 2>/dev/null; then
+# -- ## --    #     chosen_cover="$extracted"
+# -- ## --    # fi
+# -- ## --
+# -- ## --    use_album_cover "$chosen_cover"
+# -- ## --
+# -- ## --###############################################
+# -- ## --# Case 2: Artist/Track.ext
+# -- ## --###############################################
+# -- ## --
+# -- ## --elif [[ "$slash_count" -eq 1 ]]; then
+# -- ## --    warning "Track '$track_file' has no album directory"
+# -- ## --    chosen_cover="$default_cover"
+# -- ## --    use_album_cover "$chosen_cover"
+# -- ## --
+# -- ## --###############################################
+# -- ## --# Unknown layout
+# -- ## --###############################################
+# -- ## --
+# -- ## --else
+# -- ## --    warning "Unknown track path format: '$track_file'"
+# -- ## --    chosen_cover="$default_cover"
+# -- ## --    use_album_cover "$chosen_cover"
+# -- ## --fi
+# -- ## --
+# -- ## --###############################################
+# -- ## --# Send desktop notification
+# -- ## --###############################################
+# -- ## --
+# -- ## --if [[ -n "$artist" && -n "$title" ]]; then
+# -- ## --    send_notification "$artist" "$title" "$albumartist" "$album" "$year" "$chosen_cover"
+# -- ## --else
+# -- ## --    warning "Missing artist/title metadata; skipping notification"
+# -- ## --fi

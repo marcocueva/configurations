@@ -1,0 +1,39 @@
+#!/bin/bash
+
+CITY='TIERP,se'
+API_KEY='551cf557a8f7aa0244f2e5f9104b4a6e'
+UNITS='metric' 
+API_ENDPOINT='http://api.openweathermap.org/data/2.5/weather'
+
+# --- 1. DATA FETCHING ---
+WEATHER=$(curl -s --max-time 5 "${API_ENDPOINT}?q=${CITY}&appid=${API_KEY}&units=${UNITS}")
+
+TEMP=$(echo "$WEATHER" | jq -r '.main.temp // empty' 2>/dev/null)
+ICON_ID=$(echo "$WEATHER" | jq -r '.weather[0].icon // empty' 2>/dev/null)
+
+# Assign plain text icon
+# Standard Nerd Font Weather Glyphs (matching Iosevka / Hack Nerd Font)
+case "$ICON_ID" in
+    01d) ICON='☀️' ;; 
+    01n) ICON='🌙' ;;       
+    02d) ICON='⛅' ;; 
+    02n) ICON='☁️' ;;       
+    03d|03n) ICON='☁️' ;;       
+    04d|04n) ICON='☁️' ;;       
+    09d|09n) ICON='🌧️' ;;       
+    10d) ICON='🌦️' ;; 
+    10n) ICON='🌧️' ;;       
+    11d|11n) ICON='🌩️' ;;       
+    13d|13n) ICON='❄️' ;;       
+    50d|50n) ICON='🌫️' ;;       
+    *) ICON='🌡️' ;;
+esac
+
+# --- 2. RAW UNFORMATTED PRINTF OUTPUT ---
+if [ -n "$TEMP" ]; then
+    ROUNDED_TEMP=$(printf "%.0f" "$TEMP" 2>/dev/null || echo "$TEMP")
+    # Output raw unformatted string without a trailing newline (\n)
+    printf "%s %s°C" "$ICON" "$ROUNDED_TEMP" | tr -d '\r\n'
+else
+    printf " --°C" | tr -d '\r\n'
+fi
