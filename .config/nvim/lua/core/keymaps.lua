@@ -158,5 +158,30 @@ vim.keymap.set("n", "<LocalLeader>cd", function()
 	return require("codecompanion").cli("#{diagnostics} Can you fix these?", { focus = false, submit = true })
 end, { desc = "Send diagnostics to CLI agent" })
 
+-- Toggle CodeCompanion Chat window instantly
+vim.keymap.set({ "n", "v" }, "<leader>cc", function()
+	-- Check if any active CodeCompanion chat buffers exist
+	local found = false
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		local buf = vim.api.nvim_win_get_buf(win)
+		local ft = vim.api.nvim_get_option_value("filetype", { buf = buf })
+		if ft == "codecompanion" then
+			-- If chat window is open, close it
+			vim.api.nvim_win_close(win, true)
+			found = true
+			break
+		end
+	end
+
+	-- If not open, launch the chat
+	if not found then
+		vim.cmd("CodeCompanionChat")
+	end
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Toggle CodeCompanion Chat",
+})
+
 -- Open url under cursor
 vim.keymap.set("n", "gx", "<esc>:URLOpenUnderCursor<cr>")

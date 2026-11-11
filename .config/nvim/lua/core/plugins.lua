@@ -186,18 +186,21 @@ require("lazy").setup({
 			display = {
 				chat = {
 					window = {
-						layout = "float", -- "float", "vertical", "horizontal", "tab", "buffer"
-						position = "bottom",
-						height = 0.8,
-						width = 0.85,
+						layout = "vertical", -- "float", "vertical", "horizontal", "tab", "buffer"
+						position = "right",
+						height = 0.6,
+						width = 0.35,
 						border = "single",
+						opts = {
+							winblend = 10, -- Slight transparency so code behind it is readable
+						},
 					},
 				},
 				cli = {
 					window = {
 						layout = "float",
-						height = 0.8,
-						width = 0.85,
+						height = 0.6,
+						width = 0.6,
 						border = "single",
 					},
 				},
