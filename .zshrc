@@ -90,7 +90,7 @@ function y() {
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-eval $(ssh-agent)
+# eval $(ssh-agent)
 
 # Zoxide (Directory navigation)
 if command -v zoxide 1>/dev/null 2>&1; then
@@ -108,3 +108,19 @@ export PATH="$HOME/ltex-ls-16.0.0/bin/:$PATH"
 export GTK_IM_MODULE=simple
 
 export ESCDELAY=25
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

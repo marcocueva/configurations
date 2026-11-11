@@ -188,5 +188,5 @@ export PATH="$HOME/ltex-ls-16.0.0/bin/:$PATH"
 eval "$(fzf --bash)"
 
 # this is a test
-eval "$(ssh-agent)"
+# eval "$(ssh-agent)"
 
