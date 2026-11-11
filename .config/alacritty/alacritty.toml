@@ -1,0 +1,94 @@
+
+# ======================================================================
+#  Alacritty Configuration (Gruvbox Dark, Iosevka, Hyprland, tmux)
+# ======================================================================
+
+# --- Window ---
+[window]
+decorations = "full"
+opacity = 0.94   # Hyprland transparency
+blur = true      # Hyprland blur (requires blur in Hyprland config)
+
+[window.padding]
+x = 12
+y = 12
+
+# --- Font ---
+[font]
+size = 11.0
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[font.italic]
+family = "Iosevka Nerd Font Mono"
+style = "Italic"
+
+# Ligatures are enabled by default in Alacritty
+
+# --- Scrolling ---
+[scrolling]
+history = 20000
+multiplier = 3
+
+# --- Cursor ---
+[cursor]
+style = "Beam"
+unfocused_hollow = true
+
+# --- Selection ---
+[selection]
+save_to_clipboard = true
+
+# --- tmux-friendly keybindings ---
+[keyboard]
+bindings = [
+  # Standard copy/paste
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+
+  # Font size
+  { key = "Equals", mods = "Control", action = "ResetFontSize" },
+  { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+
+  # tmux passthrough (Ctrl+Space prefix)
+  { key = "Space", mods = "Control", chars = "\u0000" },
+
+  # Vi mode
+  { key = "Escape", mode = "Vi", action = "ClearSelection" }
+]
+
+[cursor.vi_mode_style]
+shape = "Block"
+blinking = "Off"
+
+# --- Colors: Gruvbox Dark ---
+[colors.primary]
+background = "#1d2021"
+foreground = "#ebdbb2"
+
+[colors.cursor]
+text = "#1d2021"
+cursor = "#fb4934"
+
+[colors.normal]
+black   = "#282828"
+red     = "#cc241d"
+green   = "#98971a"
+yellow  = "#d79921"
+blue    = "#458588"
+magenta = "#b16286"
+cyan    = "#689d6a"
+white   = "#a89984"
+
+[colors.bright]
+black   = "#928374"
+red     = "#fb4934"
+green   = "#b8bb26"
+yellow  = "#fabd2f"
+blue    = "#83a598"
+magenta = "#d3869b"
+cyan    = "#8ec07c"
+white   = "#ebdbb2"

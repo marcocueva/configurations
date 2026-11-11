@@ -1,0 +1,116 @@
+directory: /mnt/261DD17148F6C035/Beets
+library: ~/.config/beets/library.db
+
+import:
+  move: no
+  copy: yes
+  write: yes
+  autotag: yes
+  resume: ask
+  incremental: yes
+  log: ~/.config/beets/import.log
+  quiet_fallback: skip
+  extra_files: yes
+  from_scratch: no
+
+extrafiles:
+  patterns:
+    artwork: ["*.jpg", "*.jpeg", "*.png", "cover.*", "folder.*"]
+    booklets: ["*.pdf"]
+    logs: ["*.log"]
+
+musicbrainz:
+  search_ids: yes
+  default_action: asis
+  preferred:
+    countries: [US, GB, EU]
+    media: [CD, Digital Media]
+    original_year: yes
+
+# Force all "Various Artists" albums into the Compilations rule
+albumartist:Various Artists: comp
+
+paths:
+  # --- COMPILATIONS ---
+  comp: Compilations/$album ($year)/$track - $artist - $title
+
+  # --- ALBUMTYPE RULES ---
+  albumtype:album: $albumartist/$album ($year)/$track $title
+  albumtype:soundtrack: Soundtracks/$album ($year)/$track - $artist - $title
+  albumtype:ep: $albumartist/EPs/$album ($year)/$track $title
+  albumtype:live: $albumartist/Live/$album ($year)/$track $title
+
+  # --- SINGLETONS ---
+  singleton: $artist/$title
+
+  # --- FALLBACK FOR MISSING ALBUM TAG ---
+  albumtype_unknown: $original_folder/$track - $artist - $title
+
+  # --- DEFAULT RULE ---
+
+  default: $albumartist/$album/$track $title
+
+match:
+  strong_rec_thresh: 0.10
+  medium_rec_thresh: 0.25
+  max_rec:
+    singleton: strong
+  preferred:
+    countries: [US, GB, EU]
+    media: [CD, Digital Media]
+    original_year: yes
+
+plugins:
+  - duplicates
+  - fetchart
+  - ftintitle
+  - zero
+  - scrub
+  - mbsync
+  - missing
+  - playlist
+  - random
+  - unimported
+
+fetchart:
+  auto: yes
+  cautious: yes
+  cover_names: cover
+  sources:
+    - filesystem
+    - coverart
+    - itunes
+    - amazon
+    - albumart
+    - fanarttv
+
+missing:
+  format: "$albumartist - $album - $title"
+  count: yes
+
+unimported:
+  ignore_subdirectories: [Temp, PreSort]
+
+duplicates:
+  keys: [mb_trackid]
+  full: yes
+  format_preference: [flac, alac, wav, ogg, mp3]
+
+playlist:
+  auto: no
+  relative_to: ~/Music
+  playlist_dir: ~/.mpd/playlists
+  forward_slash: no
+
+mpd:
+  host: localhost
+  port: 6600
+
+zero:
+  auto: no
+
+scrub:
+  auto: no
+
+mbsync:
+  auto: no
