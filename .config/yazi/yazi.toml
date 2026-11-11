@@ -1,0 +1,154 @@
+[mgr]
+show_hidden = true
+sort_by = "natural"
+sort_dir_first = true
+linemode = "size_and_mtime"
+scrolloff = 10
+
+[opener]
+edit = [{ run = 'nvim %s', block = true, for = "unix", desc = "Editor" }]
+open = [{ run = 'xdg-open %s', desc = "System Open" }]
+zathura = [{ run = 'zathura %s', orphan = true, desc = "Zathura" }]
+w3m = [{ run = 'w3m  -cols 120 %s', block = true, desc = "w3m Browser" }]
+gimp = [{ run = 'gimp %s', block = false, desc = "Edit in Gimp" }]
+inkscape = [{ run = 'inkscape %s', block = false, desc = "Edit in Inkscape" }]
+extract = [{ run = 'ya pub extract --list %s', desc = "Extract here" }]
+archive = [{ run = 'nautilus %s', desc = "Open in Nautilus", orphan = true }]
+exec = [{ run = '%s', desc = "Execute AppImage", fork = true }]
+
+[open]
+prepend_rules = [
+  # 1. Archives: Force Nautilus directly without calling xdg-open
+  { url = "*.{zip,rar,7z,tar,gz,bz2,xz,zstd,tgz}", use = [
+    "archive",
+    "extract",
+  ] },
+  { mime = "application/{zip,x-7z-compressed,x-tar,x-gtar,x-gzip,x-xz,x-bzip2,x-archive}", use = [
+    "archive",
+    "extract",
+  ] },
+
+  # 2. AppImages: Direct execution
+  { url = "*.{AppImage,appimage}", use = "exec" },
+  { mime = "application/{x-appimage,vnd.appimage}", use = "exec" },
+
+  # 4. Vector Graphics: Edit/view directly (put xdg-open last)
+  { url = "*.{svg,ai}", use = [
+    "inkscape",
+    "reveal",
+    "open",
+  ] },
+  { mime = "image/svg+xml", use = [
+    "inkscape",
+    "reveal",
+    "open",
+  ] },
+
+  # 3. Images: Edit/view directly (put xdg-open last)
+  { url = "*.{jpg,jpeg,png,webp,psd,jxl,avif}", use = [
+    "gimp",
+    "reveal",
+    "open",
+  ] },
+  { mime = "image/*", use = [
+    "gimp",
+    "reveal",
+    "open",
+  ] },
+
+  # 4. HTML / Web
+  { url = "*.{html,htm}", use = [
+    "w3m",
+    "edit",
+    "reveal",
+    "open",
+  ] },
+  { mime = "text/html", use = [
+    "w3m",
+    "edit",
+    "reveal",
+    "open",
+  ] },
+
+  # 5. Documents / Config / Code
+  { url = "*.json", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "text/*", use = [
+    "edit",
+    "reveal",
+  ] },
+  { mime = "application/{json,ndjson,javascript}", use = [
+    "edit",
+    "reveal",
+  ] },
+
+  # 6. PDF & Office Files
+  { mime = "application/pdf", use = [
+    "zathura",
+    "open",
+    "reveal",
+  ] },
+  { url = "*.{docx,doc,xlsx,xls,odt,pdf}", use = [
+    "open",
+    "reveal",
+  ] },
+
+  # Force dotfiles, configs, and plain text to open in Neovim (or your preferred editor)
+  { url = ".*", use = [
+    "edit",
+    "reveal",
+  ] },
+
+  # Default fallback rule for directory opening / revealing
+  { mime = "inode/directory", use = [
+    "open",
+    "reveal",
+  ] },
+]
+
+rules = [
+  # Folders
+  { url = "*/", use = ["edit", "open", "reveal"] },
+
+  # Text & Code Fallbacks
+  { mime = "text/*", use = ["edit", "reveal"] },
+  { mime = "inode/empty", use = ["edit", "reveal"] },
+
+  # Media Rules
+  { mime = "{audio,video}/*", use = ["play", "reveal"] },
+  { url = "*.{mp4,mkv,webm,avi,mov,mp3,flac,wav}", use = ["play", "reveal"] },
+
+  # Neural Network / Specialized Visualizers
+  { url = "*.onnx", use = "netron" },
+
+  # Catch-all Fallback
+  { url = "*", use = ["open", "reveal"] },
+]
+
+[preview]
+rules = [
+  { mime = "inode/directory", use = "directory" },
+  { mime = "text/plain", use = "code" },
+  { mime = "text/*", use = "code" },
+  { url = "*.md", use = "glow" },
+  { mime = "application/x-zerosize", use = "code" },
+  { url = "*", use = "code" },
+]
+
+prepend_preloaders = [
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { url = "*.docx", run = "office" },
+]
+
+prepend_previewers = [
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { url = "*.docx", run = "office" },
+]
