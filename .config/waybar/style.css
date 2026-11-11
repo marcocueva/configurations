@@ -1,0 +1,199 @@
+@import "colors.css";
+
+/* Global font + color */
+* {
+  font-family: "Hack Nerd Font", "sans-serif";
+  font-size: 14px;
+  color: #ebdbb2;
+}
+
+/* Bar container */
+window#waybar {
+    background-color: #282828;
+    color: #ebdbb2;
+    min-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/*window#waybar {
+*  background: #282828;
+*  border-top: 2px solid #3c3836;
+*}
+*/
+/* Module spacing */
+#clock,
+#custom-weather,
+#custom-gpu,
+#pulseaudio,
+#network,
+#memory,
+#temperature,
+#cpu,
+#custom-clipboard,
+#wireplumber,
+#tray
+#mpd
+{
+  min-height: 0px;
+  padding: 0 4px;
+  margin: 0 2px;
+  background-color: #1d2021;
+}
+
+#tray image {
+    -gtk-icon-transform: scale(0.75);
+}
+
+/* Slightly larger icons for clarity */
+#pulseaudio,
+#network,
+#custom-clipboard {
+  font-size: 14px;
+}
+
+/* Workspaces */
+#workspaces button {
+  min-height: 0px;
+  padding: 0 2px;
+  color: #ebdbb2;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button image,
+#workspaces .taskbar-window image {
+    min-width: 14px;
+    min-height: 14px;
+    -gtk-icon-transform: scale(0.85);
+}
+
+/* Focused workspace */
+#workspaces button.focused,
+#workspaces button.active {
+  background: #458588;
+  color: #1d2021;
+  border-bottom: 3px solid #fabd2f;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+  background-color: #721703;
+}
+
+/* Workspace labels */
+#workspaces .workspace-label {
+  padding-left: 2px;
+  border-top: 1px solid transparent;
+}
+
+/* Taskbar windows */
+#workspaces .taskbar-window {
+  border-top: 1px solid transparent;
+  padding: 0 2px;
+  margin: 0 1px;
+  font-weight: normal;
+}
+
+/* Highlight visible windows */
+#workspaces button.visible .taskbar-window,
+#workspaces button.visible .workspace-label {
+  border-color: #839496;
+}
+
+/* Icon alignment for taskbar */
+#workspaces .taskbar-window image {
+  min-width: 16px;
+  min-height: 16px;
+  margin-top: 1px;
+  color: #ebdbb2;
+  /* Gruvbox FG for symbolic icons */
+}
+
+/* Module colors */
+#clock {
+  color: #d79921;
+}
+
+#custom-weather {
+  color: #a4c2f4;
+}
+
+#pulseaudio {
+  color: #98971a;
+}
+
+#wireplumber {
+  color: #98971a;
+}
+
+#network {
+  color: #83a598;
+}
+
+#custom-clipboard {
+  color: #fabd2f;
+}
+
+#custom-disk {
+  color: #558e05;
+  padding: 0 5px;
+}
+
+#custom-mail {
+  color: #839496;
+  padding: 0 15px;
+}
+
+#custom-mail.unread {
+  color: #cb4b16;
+  font-weight: bold;
+}
+
+#custom-gpu {
+  color: #fabd2f;
+  padding: 0 5px;
+}
+
+#cpu {
+  color: #458588;
+}
+
+#temperature {
+  color: #cecabb;
+}
+
+#memory {
+  color: #d3869b;
+}
+
+/* MPD controls */
+#custom-mpd-prev,
+#custom-mpd-toggle,
+#custom-mpd-next {
+  padding: 0 6px;
+  font-size: 16px;
+  color: #eafff0;
+}
+
+#custom-mpd-toggle {
+  font-weight: bold;
+}
+
+/* Mode + Submap */
+#mode {
+  background: #cc241d;
+  color: #ebdbb2;
+  border-bottom: 3px solid #fb4934;
+  padding: 0 15px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+#submap {
+  background: #fb4934;
+  color: #282828;
+  padding: 0 10px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}

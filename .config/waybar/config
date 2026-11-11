@@ -1,0 +1,186 @@
+{
+    "layer": "top",
+    "font": {
+        "family": "Iosevka Nerd Font",
+        "size": 14
+    },
+    "position": "bottom",
+    "height": 28,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/submap",
+        "mpd",
+        "custom/mpd-prev",
+        "custom/mpd-toggle",
+        "custom/mpd-next",
+        "custom/mail"
+    ],
+
+    "modules-center": [
+        "clock",
+        "custom/weather"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "temperature",
+        "memory",
+        "custom/gpu",
+        "custom/disk",
+        "custom/clipboard",
+        "wireplumber",
+        "tray"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon} {windows}",
+        "format-window-separator": "",
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true,
+            "format": "{icon} ",
+            "icon-size": 14,
+            "on-click-window": "~/.config/waybar/scripts/focus-window.sh {address} {button}"
+        }
+    },
+
+    "hyprland/submap": {
+        "format": "  {}",
+        "max-length": 60,
+        "tooltip": false
+    },
+
+    "custom/mpd-prev": {
+        "format": "⏮",
+        "on-click": "mpc prev",
+        "tooltip": "Previous track"
+    },
+
+    "custom/mpd-toggle": {
+        "format": " ⏯",
+        "on-click": "mpc toggle",
+        "tooltip": "Play/Pause"
+    },
+
+    "custom/mpd-next": {
+        "format": " ⏭ ",
+        "on-click": "mpc next",
+        "tooltip": "Next track"
+    },
+
+    "custom/mail": {
+        "format": "📬 : {}",
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/mail-count.sh",
+        "return-type": "json",
+        "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"special:mail\" })'",
+        "on-click-right": "hyprctl dispatch 'hl.dsp.workspace.toggle_special({ workspace = \"special:mail\" })'",
+        "escape": false,
+        "tooltip": true
+    },
+
+    "mpd": {
+        "format": " {consumeIcon}{randomIcon} {repeatIcon}{singleIcon}{stateIcon} <span color=\"#ffeaf9\">{artist}</span> - <span color=\"#EAFFF0\">{title}</span> <span color=\"#84d189\"></span>  {volume}%",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"special:music\" })'",
+        "on-click-right": "hyprctl dispatch 'hl.dsp.workspace.toggle_special({ workspace = \"special:music\" })'",
+        "on-scroll-up": "mpc volume +5",
+        "on-scroll-down": "mpc volume -5",
+        "consume-icons": {
+            "on": "  "
+        },
+        "random-icons": {
+            "off": "<span color=\"#B09C6F\"></span> ",
+            "on": "<span color=\"#83B06F\"></span> "
+        },
+        "repeat-icons": {
+            "on": "  "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "<span color=\"#721e19\"></span> ",
+            "playing": "<span color=\"#249ca4\"></span> "
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+    "clock": {
+        "format": "{:%Y-%m-%d  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 1800,
+        "exec": "~/scripts/weather",
+        "markup": false, // <--- disables pango
+        "on-click": "xdg-open 'https://openweathermap.org/city/2669149'"
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr} / {cidr} ({bandwidthUpBits} - {bandwidthDownBits})"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage} % ",
+        "tooltip": true,
+        "interval": 15
+    },
+
+    "custom/gpu": {
+        "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+        "format": "<span color='#74D4FF'>GPU:</span> {}% ",
+        "interval": 10,
+        "tooltip": false,
+        "on-click": "ghostty -e nvtop"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "MEM: {}% "
+    },
+
+    "custom/disk": {
+        "exec": "~/scripts/disk_info.sh",
+        "return-type": "json",
+        "interval": 60,
+        "format": "SPC: {}"
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+    "custom/clipboard": {
+        "format": "<span size='12pt'></span>",
+        "on-click": "clipman pick -t wofi && pkill wofi"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "on-click": "pavucontrol",
+        "format-icons": ["", "", ""]
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
+}
