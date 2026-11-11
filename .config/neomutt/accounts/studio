@@ -1,0 +1,5 @@
+set from = "studio@marcocueva.com"
+set sendmail = "msmtp -a studio"
+set spoolfile = "+studio/INBOX"
+set record = "+studio/Sent"
+set postponed = "+studio/Drafts"

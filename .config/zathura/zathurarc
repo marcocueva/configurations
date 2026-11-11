@@ -1,0 +1,21 @@
+# Clipboard
+set selection-clipboard clipboard
+
+# Page layout
+set adjust-open "fit-width"
+
+# Single-key toggle for dark mode
+map <C-r> recolor
+
+# Key remappings
+map <C-f> search
+
+# Database and bookmarks
+set database sqlite
+
+# Behavior and navigation
+set open-first-page false
+set window-title-page true
+set window-title-home-tilde true
+set scroll-page-aware true
+set incremental-search true

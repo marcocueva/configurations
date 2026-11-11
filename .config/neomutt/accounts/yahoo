@@ -1,0 +1,5 @@
+set from = "marco.cueva@yahoo.com"
+set sendmail = "msmtp -a yahoo"
+set spoolfile = "+yahoo/INBOX"
+set record = "+yahoo/Sent"
+set postponed = "+yahoo/Drafts"

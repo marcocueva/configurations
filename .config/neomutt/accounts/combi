@@ -1,0 +1,5 @@
+set from = "mail@marcocueva.com"
+set sendmail = "msmtp -a Combi"
+set spoolfile = "+mail_combi/INBOX"
+set record = "+mail_combi/Sent"
+set postponed = "+mail_combi/Drafts"

@@ -1,0 +1,21 @@
+# 1. This is for the "automatic" inline view (text only)
+text/html; w3m -I %{charset} -T text/html %s; copiousoutput
+
+# 2. This is for when you hit 'Enter' in the attachment menu (interactive)
+text/html; w3m -I %{charset} -T text/html %s;
+# REMOVE '-dump' from the second line. 
+ 
+#PDFs
+application/pdf; /usr/bin/zathura %s
+
+#Images
+image/png; /usr/bin/feh %s
+image/jpeg; /usr/bin/feh %s
+
+# MS Word and Office documents for Fedora
+application/msword; libreoffice --writer %s; edit=libreoffice --writer %s; test=test -n "$DISPLAY"
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --writer %s; edit=libreoffice --writer %s; test=test -n "$DISPLAY"
+application/vnd.ms-excel; libreoffice --calc %s; edit=libreoffice --calc %s; test=test -n "$DISPLAY"
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice --calc %s; edit=libreoffice --calc %s; test=test -n "$DISPLAY"
+application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice --impress %s; edit=libreoffice --impress %s; test=test -n "$DISPLAY"
+application/vnd.oasis.opendocument.text; libreoffice --writer %s; edit=libreoffice --writer %s; test=test -n "$DISPLAY"

@@ -1,0 +1,5 @@
+set from = "inkorg@marcocueva.com"
+set sendmail = "msmtp -a Inkorg"
+set spoolfile = "+Inkorg/INBOX"
+set record = "+Inkorg/Sent"
+set postponed = "+Inkorg/Drafts"
