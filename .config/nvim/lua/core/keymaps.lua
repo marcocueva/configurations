@@ -143,23 +143,64 @@ vim.keymap.set("n", "<leader>rw", function()
 end, { desc = "Prompt for width and soft-wrap window" })
 
 -- These keymaps cover the most common ways of working with an agent:
--- To write a prompt from any buffer:
-vim.keymap.set({ "n", "v" }, "<LocalLeader>cp", function()
+-- 1. Toggle the native Chat window
+vim.keymap.set({ "n", "v" }, "<leader>cc", "<cmd>CodeCompanionChat Toggle<cr>", {
+	noremap = true,
+	silent = true,
+	desc = "Toggle CodeCompanion Chat",
+})
+
+-- 2. Add visual selection or current buffer to the active Chat buffer
+vim.keymap.set("v", "<LocalLeader>ca", "<cmd>CodeCompanionChat Add<cr>", {
+	noremap = true,
+	silent = true,
+	desc = "Add selection to CodeCompanion Chat",
+})
+
+vim.keymap.set("n", "<LocalLeader>ca", function()
+	require("codecompanion").chat({ params = "#{buffer}" })
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Add current buffer to CodeCompanion Chat",
+})
+
+-- 3. Send current buffer's LSP diagnostics to Chat and auto-submit
+vim.keymap.set("n", "<LocalLeader>cd", function()
+	require("codecompanion").chat({
+		params = "#{diagnostics} Can you fix these?",
+		auto_submit = true,
+	})
+end, {
+	noremap = true,
+	silent = true,
+	desc = "Send diagnostics to CodeCompanion Chat",
+})
+
+-- 4. Open CodeCompanion Actions palette (prompts, inline edits, explain, fix)
+vim.keymap.set({ "n", "v" }, "<LocalLeader>cp", "<cmd>CodeCompanionActions<cr>", {
+	noremap = true,
+	silent = true,
+	desc = "Open CodeCompanion Actions",
+})
+
+---- To write a prompt from any buffer:
+vim.keymap.set({ "n", "v" }, "<LocalLeader>clp", function()
 	return require("codecompanion").cli({ prompt = true })
 end, { desc = "Prompt the CLI agent" })
 
--- Adding Context, to share the current buffer, or the visual selection, without writing a prompt:
-vim.keymap.set({ "n", "v" }, "<LocalLeader>ca", function()
+---- Adding Context, to share the current buffer, or the visual selection, without writing a prompt:
+vim.keymap.set({ "n", "v" }, "<LocalLeader>cla", function()
 	return require("codecompanion").cli("#{this}", { focus = false })
 end, { desc = "Add context to the CLI agent" })
 
--- Fixing LSP Diagnostics, to send the current buffer's diagnostics and ask the agent to fix them:
-vim.keymap.set("n", "<LocalLeader>cd", function()
+---- Fixing LSP Diagnostics, to send the current buffer's diagnostics and ask the agent to fix them:
+vim.keymap.set("n", "<LocalLeader>cld", function()
 	return require("codecompanion").cli("#{diagnostics} Can you fix these?", { focus = false, submit = true })
 end, { desc = "Send diagnostics to CLI agent" })
 
--- Toggle CodeCompanion Chat window instantly
-vim.keymap.set({ "n", "v" }, "<leader>cc", function()
+---- Toggle CodeCompanion Chat window instantly
+vim.keymap.set({ "n", "v" }, "<leader>clc", function()
 	-- Check if any active CodeCompanion chat buffers exist
 	local found = false
 	for _, win in ipairs(vim.api.nvim_list_wins()) do
@@ -173,7 +214,7 @@ vim.keymap.set({ "n", "v" }, "<leader>cc", function()
 		end
 	end
 
-	-- If not open, launch the chat
+	--	-- If not open, launch the chat
 	if not found then
 		vim.cmd("CodeCompanionChat")
 	end

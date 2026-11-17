@@ -46,7 +46,7 @@ function M.setup(config)
 		-- Workspace-specific autostarts
 		hl.exec_cmd('[workspace 1 silent] kitty --title "MainSession"')
 		hl.exec_cmd("[workspace 2 silent] " .. browser)
-		hl.exec_cmd("[workspace 3 silent] ghostty --class=com.tiled.yazi -e yazi")
+		hl.exec_cmd("[workspace 3 silent] kitty --class=com.tiled.yazi -e yazi")
 		hl.exec_cmd("[workspace 4 silent] thunderbird")
 
 		-- Special Workspaces

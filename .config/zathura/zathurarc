@@ -7,15 +7,28 @@ set adjust-open "fit-width"
 # Single-key toggle for dark mode
 map <C-r> recolor
 
-# Key remappings
-map <C-f> search
-
 # Database and bookmarks
 set database sqlite
 
+# 2. Adjust page to fit width on open
+set adjust-open "fit-width"
+
+# 4. Remap keys (optional)
+map <C-f> search
+
 # Behavior and navigation
+
+# Remember last position when reopening documents
 set open-first-page false
+
+# Show page number in the window title
 set window-title-page true
+
+# Use ~ instead of full home path in title
 set window-title-home-tilde true
+
+# Stop at page boundaries when scrolling by half or full pages
 set scroll-page-aware true
+
+# Incremental search (highlights as you type)
 set incremental-search true

@@ -1,4 +1,4 @@
-directory: /mnt/261DD17148F6C035/Beets
+directory: /mnt/New/Beets/
 library: ~/.config/beets/library.db
 
 import:
@@ -15,9 +15,9 @@ import:
 
 extrafiles:
   patterns:
-    artwork: ["*.jpg", "*.jpeg", "*.png", "cover.*", "folder.*"]
-    booklets: ["*.pdf"]
-    logs: ["*.log"]
+    artwork: ['*.jpg', '*.jpeg', '*.png', 'cover.*', 'folder.*']
+    booklets: ['*.pdf']
+    logs: ['*.log']
 
 musicbrainz:
   search_ids: yes
@@ -85,7 +85,7 @@ fetchart:
     - fanarttv
 
 missing:
-  format: "$albumartist - $album - $title"
+  format: '$albumartist - $album - $title'
   count: yes
 
 unimported:
