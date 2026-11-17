@@ -1,0 +1,2206 @@
+# abook addressbook file
+
+[format]
+program=abook
+version=0.6.2
+
+
+[0]
+name=3Svar int.
+phone=+46 735333333
+
+[1]
+name=Abic Kemi
+other_phone=392
+phone=+46 11149030
+
+[2]
+name=Agneta Bergendahl
+email=agneta.bergendahl@foreign.ministry.se
+
+[3]
+name=Albin Karlsson
+email=glittermek@rocketmail.com
+phone=+46 733610690
+
+[4]
+name=Aleksandra Stratimirovic
+email=a.strati@chello.se
+notes=Category: Kollegor
+
+[5]
+name=Alexandra Skarp
+other_phone=+46 736834626
+phone=+46 8197967
+
+[6]
+name=alma estrada
+email=almaestrada_@hotmail.com
+
+[7]
+name=Alvaro Campo
+email=alvaro.g.campo@me.com
+phone=+46 708475743
+
+[8]
+name=Amalia Årfelt
+email=amalia.arfelt@gmail.com
+phone=+46 706370470
+
+[9]
+name=ana olbe
+email=olbe.ana@gmail.com
+phone=+46 709625026
+
+[10]
+name=Anders Boqvist
+email=ostkant@algonet.se
+
+[11]
+name=Anders Hellström
+phone=+46 704430116
+
+[12]
+name=Anders Lindgren
+email=anders.lindgren@subtopia.se
+other_phone=+46 8309769, +46 739171275, +46 704378237
+phone=+46 700363640
+
+[13]
+name=Anders Magnusson
+email=magnusson.and@gmail.com
+
+[14]
+name=Anders Mattsson Dalakranar
+phone=+46 706876020
+
+[15]
+name=Anders Rönquist
+email=anders.j.ronquist@foreign.ministry.se
+phone=+46 768991221
+
+[16]
+name=Andersson Thorbjörn
+email=thorbjorn.andersson@sweco.se
+phone=+46 734129236
+
+[17]
+name=Andreas Hammar
+email=hammar_andreas@yahoo.se
+phone=+46 707604194
+
+[18]
+name=Andreas Ribbung
+email=andreas@ribbung.com
+phone=+46 703365862
+
+[19]
+name=Andy Hangmen
+phone=+46 733417623
+
+[20]
+name=Anita Pettersson
+email=aa49796@stockholm.se
+
+[21]
+name=Anja Hultberg
+phone=+45 25489198
+
+[22]
+name=Anna Erstorp
+email=annaerstorp@gmail.com
+
+[23]
+name=Anna-Greta Björkman
+email=anna-greta.holmbom@stockholm.se
+
+[24]
+name=Anna Karin
+phone=+46 702787744
+
+[25]
+name=Anna-Karin Ericson
+email=anna-karin.ericson@stockholm.se
+
+[26]
+name=Anna-Karin Hedberg
+email=ak@gallericharlottelund.com
+
+[27]
+name=Anna Löwdin
+phone=+46 705777395
+
+[28]
+name=Anna Nordenmark
+other_phone=+33 148595538
+phone=+46 33144788011
+
+[29]
+name=Anna Norén
+email=anna.noren@sweco.se
+other_email=annav.noren@gmail.com
+phone=+46 722124731
+
+[30]
+name=Annapia
+phone=+46 707852807
+
+[31]
+name=Anna Rönquist
+email=annaronquist@hotmail.com
+phone=+46 731417347
+
+[32]
+name=Anna Stina Erlandsson
+email=annastina.erlandsson@gmail.com
+
+[33]
+name=Ann-Cathrin Andersson
+email=passionsblomma@hotmail.com
+other_phone=+1 9789936874, +91 9789936874, +91 7338909588
+phone=+46 760645888
+
+[34]
+name=Anneli Westfelt
+email=anneliwestfelt@hotmail.com
+
+[35]
+name=Annica Lundquist
+phone=+46 736241185
+
+[36]
+name=Annika Johansson
+email=annikajohansson9@gmail.com
+
+[37]
+name=Annika Pettersson
+phone=+46 2386280
+
+[38]
+name=Ann Magnusson
+email=ann@ampublic.se
+other_phone=+46 704242522
+phone=23
+address=Bohusgatan 23, Stockholm
+notes=Phone: 08-642 05 06
+
+[39]
+name=Ann Wohlert
+email=ann.wohlert@tele2.se
+
+[40]
+name=Anton Hansen
+email=antonhultberghansen@gmail.com
+phone=+46 729753292
+
+[41]
+name=Antonio Lainez
+phone=+46 732619650
+
+[42]
+name=Anton Johnston
+email=anton.johnston@foreign.ministry.se
+
+[43]
+name=Anton Stassinos
+email=antonss@lycos.com
+phone=+46 707630810
+address=Stockholm Sweden
+city=Stockholm
+country=Sweden
+notes=Nickname: Anton_Stassinos Category: VÃƒÂ¤nner
+
+[44]
+name=APOLLO KUMARESAN
+phone=+91 9445632992
+
+[45]
+name=Arianna Diaz
+email=ari_diaz30@hotmail.com
+phone=+504 96481119
+
+[46]
+name=Arne Höök
+email=arne.bjorkhagen@gmail.com
+other_phone=40, 12150
+phone=+46 730763493
+address=40 Axvallsvägen
+city=Johanneshov
+zip=12150
+
+[47]
+name=Aron
+phone=+46 703270768
+
+[48]
+name=Astor Cueva
+email=astorcueva@gmail.com
+other_phone=+46 722339259
+phone=36
+address=36 Axvallsvägen
+city=Johanneshov
+
+[49]
+name=Aura Guerra (Souvenir)
+phone=+504 98138741
+
+[50]
+name=Aurelia Carcamo
+email=aurelia_carcamo@hotmail.com
+phone=+46 766399350
+
+[51]
+name=Barbara Roatan B&B
+phone=+504 99912690
+
+[52]
+name=Barbro Hedström
+phone=+46 705152080
+
+[53]
+name=Barbro Metell
+email=b.metell@vallnet.nu
+other_email=m.metell@telia.com
+other_phone=+46 86131822, +46 701718211, +46 704820905
+phone=+46 86181322
+
+[54]
+name=Baskaran Kathiravan
+phone=+91 9443342097
+
+[55]
+name=Bavaria
+phone=+46 184184546
+
+[56]
+name=Beata Nordenmark
+email=beatanordenmark@yahoo.se
+notes=Category: VÃƒÂ¤nner | Category: VÃ¤nner
+
+[57]
+name=Bengt Greinert AB
+other_phone=+46 702534884
+phone=+46 86459005
+
+[58]
+name=Besser Arguijo (jade)
+phone=+504 33707568
+
+[59]
+name=Björka Mineral AB
+phone=+46 40206700
+
+[60]
+name=Björn Askinger
+email=bjorn.askinger@titania.se
+
+[61]
+name=Björn Falkenäs
+email=bjorn@bruksdesign.se
+other_phone=+46 703971220
+phone=+46 29341052
+notes=Category: Vänner
+
+[62]
+name=Björn Koop Magnusson
+phone=+46 87046092
+
+[63]
+name=Björn Sandström
+email=bjorn.sandstrom@peoplepro.se
+
+[64]
+name=Bo Andersson
+email=bo-andersson1@spray.se
+
+[65]
+name=Bobba Kitanovic
+phone=+46 733759010
+
+[66]
+name=Bo Samuelson
+email=bo.samuelson@gmail.com
+other_phone=41323, +46 736440611
+phone=2
+address=Doktor Weltzins Gata 2 B
+city=Göteborg
+zip=41323
+
+[67]
+name=Britta Konstkonsult
+phone=+46 706304507
+
+[68]
+name=Bruno René Tardat
+email=bruno@dof.se
+other_email=info@smoothmachines.com
+other_phone=+46 702137744
+phone=+46 731057502
+
+[69]
+name=Calle Carboni
+phone=+46 739504768
+
+[70]
+name=Camilla Lothigius
+email=camilla.lothigius@linkoping.se
+
+[71]
+name=Candy Leiva
+email=dra.cmlp@gmail.com
+
+[72]
+name=Carina Fogblad
+email=carina.fogblad@orebro.se
+
+[73]
+name=Carina Östblom Eriksson
+email=carrabella59@hotmail.com
+
+[74]
+name=Carin E
+phone=+46 730613339
+
+[75]
+name=Carin Falkenäs
+email=cfal@gavlefolkteater.se
+phone=+46 705569429
+
+[76]
+name=Carlos Arias
+email=ariasbritocarlos@yahoo.com.mx
+phone=+504 31789907
+
+[77]
+name=Carlos Cárcamo
+email=cc_carcamo@hotmail.com
+other_phone=+504 33983540
+phone=+46 760445151
+
+[78]
+name=Carlos Galdamez
+phone=+1 5596235790
+
+[79]
+name=Carlos Rene Maldonado
+email=carlos_renem@hotmail.com
+other_phone=+504 33905242, +504 27724818, +504 97653548
+phone=+504 22396656
+address=Colonia Florencia Sur, No. 9021, Boulevard Suyapa
+city=Tegucigalpa M.D.C.
+country=Honduras
+
+[80]
+name=Carlos R Martinez Oyuela
+email=c_martinez_oyuela@hotmail.com
+other_phone=+504 33634655
+phone=+504 9903771
+
+[81]
+name=Carlos Simoes
+email=Simoesart@gmail.com
+
+[82]
+name=Carlos Welchez
+email=copannet@gmx.net
+
+[83]
+name=Carol Andrea Diaz
+phone=+504 33833226
+
+[84]
+name=Carolina Lopez
+email=carolina.lopez@stockholm.se
+
+[85]
+name=Carsten Höller
+email=carsten.holler@telia.com
+
+[86]
+name=Catalin Marin
+phone=+351 967248090
+
+[87]
+name=Catarina von Baumgarten
+email=catarinavonbaumgarten@yahoo.se
+
+[88]
+name=Cecilia Andersson HSB
+other_phone=+46 104422137
+phone=+46 707215167
+
+[89]
+name=Cecilia Rosengren
+email=cecilia@p-rosengren.com
+other_phone=+46 735957330
+phone=+46 842864211
+
+[90]
+name=Celso Paco
+phone=+46 700554255
+
+[91]
+name=Cesar Yanez
+email=planta2@marmolesdehonduras.com
+other_phone=+504 22269005
+phone=+504 31920142
+
+[92]
+name=Chandrashekhar (CK)
+phone=+46 709620750
+
+[93]
+name=Charlotta Mickelsson
+email=charlotta.mickelsson@telia.com
+
+[94]
+name=Charlotte Gyllner
+email=lottagy@hotmail.com
+phone=+46 857829416
+
+[95]
+name=Christer Wickman
+email=christer.w@ivansakeri.se
+
+[96]
+name=Christian Simonson
+email=christian.simonson@telia.com
+other_phone=+46 702235168, +46 728448816
+phone=+46 29341104
+
+[97]
+name=Christina
+phone=+46 703248696
+
+[98]
+name=Christina Sundeson
+email=Christina.sundeson@stockholm.se
+
+[99]
+name=Christine Rishaug Hellman
+email=christine.rishaug.hellman@motala.se
+
+[100]
+name=Christoffer Lövström
+email=Christoffer.Lovstrom@abcdbygg.se
+
+[101]
+name=Cj Samhällsbyggledning AB
+other_phone=79, 12740
+phone=+46 703701268
+address=79 Bullerholmsgränd
+city=Skärholmen
+zip=12740
+
+[102]
+name=Claudia Feige
+email=c-feige@t-online.de
+
+[103]
+name=Claudia Matta
+phone=+504 94681496
+
+[104]
+name=Creative Sculptors
+email=creativesculptors@yahoo.com
+
+[105]
+name=Cristian Luján
+phone=+46 739698032
+
+[106]
+name=Dana Costa
+phone=+46 760470400
+
+[107]
+name=Daniel Lundqvist
+email=daniel.lundqvist@stockholm.se
+
+[108]
+name=Daniel Werkmäster
+email=Daniel.Werkmaster@uppsala.se
+
+[109]
+name=Daniel Westlund
+email=dnl.westlund@gmail.com
+
+[110]
+name=Danilo Diaz
+phone=+504 33857090
+
+[111]
+name=Danny Gordon
+email=danny.gordon@glocalnet.net
+other_phone=+46 737558279
+phone=+46 86456087
+
+[112]
+name=Dario Rivera Trejo
+email=chamote29@hotmail.com
+country=Honduras
+notes=Category: Kollegor
+
+[113]
+name=David Calvert
+email=dgcalvert@gmail.com
+other_email=calvert-kilbane@erols.com
+other_phone=+1 2128644121
+phone=+1 6463512433
+
+[114]
+name=David Guerra (Souvenir)
+phone=+504 98737086
+
+[115]
+name=Denis Mauricio Orellana Gavarrete
+email=dmorellana@bancocci.hn
+
+[116]
+name=Departamento de Fideicomisos de Banco de Occidente
+phone=+504 94437420
+
+[117]
+name=Diabetes Mottagning
+phone=+46 86164028
+
+[118]
+name=Dione & Anthea
+phone=+33 626594603
+
+[119]
+name=Dione Merida
+email=dionemeridamontesdeoc@gmail.com
+other_phone=+33 616595146
+phone=+504 97425798
+address=dionemeridamontesdeoc
+
+[120]
+name=Edgardo Cueva
+email=tatocueva2@hotmail.com
+
+[121]
+name=Edna Schaeffer
+email=edna_campins@yahoo.com
+
+[122]
+name=Eduardo Galindo
+phone=+46 739765423
+
+[123]
+name=Eka Acosta
+phone=+46 704486978
+
+[124]
+name=Elektra Lagos
+phone=+32 476883258
+
+[125]
+name=Eleonora Ånhammar
+email=eleonora.anhammar@gmail.com
+
+[126]
+name=Elisabet Haglund
+email=elisabet.haglund@adk.lu.se
+
+[127]
+name=Ella Pettersson
+phone=+46 762430852
+
+[128]
+name=Ellsworth Info
+email=info@ellsworth.se
+
+[129]
+name=Claudia Emilia Matta
+phone=+504 94681496
+
+[130]
+name=Emilio Sanchez Horneros
+email=emilioshvs@gmail.com
+other_phone=+504 32209521, +504 99959600, +507 61025182
+phone=+507 646580735
+
+[131]
+name=Emirates India
+phone=+91 2240974097
+
+[132]
+name=Emma Berglund
+other_phone=53, 11449
+phone=+46 841084590
+address=53 Karlavägen
+city=Stockholm
+zip=11449
+
+[133]
+name=Erik Sunna
+phone=+46 704380806
+
+[134]
+name=Esercizi Graniti Andrea
+other_phone=+39 3488597662
+phone=+39 018766730
+
+[135]
+name=Esteban Vázquez
+phone=+504 99618772
+
+[136]
+name=Ester Estrada
+phone=+46 760503639
+
+[137]
+name=Eva-Britt Zetterlund Fagrell
+email=eva-britt.fagrell@stockholm.se
+
+[138]
+name=Eva Falk
+email=eva.falk@konstfack.se
+
+[139]
+name=Eva Larsson
+phone=+46 707205086
+
+[140]
+name=Eva Metell
+email=eva.metell@sll.se
+other_email=evametell@hotmail.com
+phone=+46 704157576
+
+[141]
+name=Eva Nyberg-Björklund
+email=evanybergbjorklund@yahoo.se
+
+[142]
+name=Eva Skarbäck
+email=eva@kro.se
+phone=+46 854542080
+
+[143]
+name=Ezequiel Pinto-Guillaume
+email=pintoguillaume@gmail.com
+
+[144]
+name=Felipe Estrada
+phone=+46 703083639
+
+[145]
+name=Fernando Munez
+phone=+503 77944444
+
+[146]
+name=Folktandvården Björkhagen
+other_phone=39, 12153
+phone=+46 812316070
+address=39 Halmstadsvägen
+city=Johanneshov
+zip=12153
+
+[147]
+name=Fran Galeano
+phone=+504 99851823
+
+[148]
+name=Fred
+phone=+504 95849089
+
+[149]
+name=Fredrik Börjesson
+email=fredrik@bps-ab.se
+other_phone=+46 739822495, 47141
+phone=+46 304677490
+address=Industriomr. Stansviks
+city=Rönnäng
+zip=47141
+
+[150]
+name=Gabriela Lopez
+phone=+46 21397703
+
+[151]
+name=Gabriela Marroquín
+phone=+504 33297023
+
+[152]
+name=Gabriel Cárcamo
+phone=+46 729699998
+
+[153]
+name=Galleri Charlotte Lund AB
+email=info@gallericharlottelund.com
+other_email=challe@gallericharlottelund.com, cl@gallericharlottelund.com
+other_phone=+46 86630978, +46 86630979
+phone=+46 709661207
+address=Kungstensgatan 23
+city=Stockholm
+zip=11357
+notes=Other Phone: +4686630979
+
+[154]
+name=GEFVERT Försäkringsmäklare AB
+email=info@gefvert.se
+other_phone=+46 86782920, +46 84405440
+phone=+46 84405442
+
+[155]
+name=German Leitzelar
+phone=99909722
+
+[156]
+name=Glasmästaren Tierp
+phone=+46 733225255
+
+[157]
+name=Gloria Sixt
+phone=+504 206038
+
+[158]
+name=Goingesten Info
+email=info@goingesten.se
+other_phone=+46 708911115
+phone=+46 47991100
+
+[159]
+name=Greinert Info
+email=info@greinert.se
+
+[160]
+name=Grus Gurra
+phone=+46 707518535
+
+[161]
+name=Gunilla Thunberg
+email=gunilla.thunberg@ne.su.se
+
+[162]
+name=Gunnar Söder
+phone=+46 709310960
+
+[163]
+name=gustaf.schneidler@stockholm.se
+email=gustaf.schneidler@stockholm.se
+
+[164]
+name=Gustav Granström
+email=gustav@ritator.se
+phone=+46 86459502
+
+[165]
+name=Gustavo Armijo Vargas
+email=garmijov@yahoo.com
+phone=+504 96052037
+
+[166]
+name=Gävle Byggteknik AB
+phone=+46 739094914
+
+[167]
+name=Hans Badstöber
+phone=+43 6642504895
+
+[168]
+name=Hans-Jörgen Johansen
+email=hjjohansen@spray.se
+phone=+46 707313740
+
+[169]
+name=Harri Monni
+email=harrimonni@hotmail.com
+country=Suecia
+
+[170]
+name=Hector Madrid
+phone=+504 98316097
+
+[171]
+name=Héctor Chavarria
+phone=+1 8175228066
+
+[172]
+name=Hector/Dora Madrid
+other_phone=+504 97553065
+phone=26513626
+
+[173]
+name=Hector Z. Siluchi
+email=hectorsiluchi@gmail.com
+
+[174]
+name=Helena Forsell
+email=helena.forsell@stockholm.se
+
+[175]
+name=Henrik Nilsson
+email=hennil71@hotmail.com
+other_email=henrik.nilsson@sr.se
+phone=+46 705959080
+notes=Nickname: henrik.nilsson_sr.se Category: VÃƒÂ¤nner
+
+[176]
+name=Henrik Sturve
+email=sturve@home.se
+phone=+46 790159533
+
+[177]
+name=henry Johansson. Grontmij AB
+other_phone=110074
+phone=+46 104802265
+
+[178]
+name=Herman Hammarström
+phone=+46 735225248
+
+[179]
+name=Hillevi Weeks
+phone=+46 760503714
+
+[180]
+name=Holmbergs Kran
+phone=+46 733657004
+
+[181]
+name=håkan granne
+email=hakan.andersson@bybrick.se
+
+[182]
+name=Ida
+phone=+46 707130037
+
+[183]
+name=Info KULTUR Kulturskolan Stockholm
+email=kulturskolan@stockholm.se
+
+[184]
+name=Inge Merstrand
+email=i.merstrand@gmail.com
+
+[185]
+name=Inger Bokliden
+email=inger.bokliden@gmail.com
+
+[186]
+name=Isaac
+phone=+46 760480781
+
+[187]
+name=Israel Avalos
+phone=+46 98117787
+
+[188]
+name=Ivab
+phone=+46 706183050
+
+[189]
+name=Jacob Kimvall
+email=jacob.kimvall@arthistory.su.se
+
+[190]
+name=Jakob Fogelquist
+email=jakob@fogelquist.se
+phone=+46 707816970
+
+[191]
+name=Jan Bryme Advokatbyrå AB
+email=jan.bryme@gmail.com
+phone=+46 706605983
+
+[192]
+name=Jane
+phone=+86 15980875620
+
+[193]
+name=Jan & Per Bygg AB
+phone=+46 706712364
+
+[194]
+name=Jan Wiik
+email=jan.wiik@folkbildning.net
+
+[195]
+name=Jenny Lawner
+email=jenny.lawner@stockholm.se
+
+[196]
+name=Jessica Banegas
+phone=+504 33443680
+
+[197]
+name=jimmy odby
+email=jimmy.odby@gmail.com
+
+[198]
+name=JOANA MARIA ANDRADE
+phone=+504 95832214
+
+[199]
+name=Jody Laundry
+phone=+91 9176851093
+
+[200]
+name=Johana Casco Figueroa
+phone=+504 98980082
+
+[201]
+name=Johan Börjesson
+email=johan.borjesson@safetransart.se
+
+[202]
+name=Johan Ljungman
+email=johan.ljungman@gmail.com
+
+[203]
+name=Johanna Matta
+phone=+504 96348440
+
+[204]
+name=Johanna Pettersson
+email=jp@abic.se
+
+[205]
+name=Johan Wiking
+email=johanwiking111@hotmail.com
+other_email=johan.wiking@swipnet.se
+phone=+46 706016018
+
+[206]
+name=Jonas Andersson (privat)
+other_phone=12249, +46 709515522
+phone=3
+address=3 Majrovägen
+city=ENSKEDE
+zip=12249
+
+[207]
+name=Jonas Granström
+email=jonas@borgstroms.se
+other_email=jonas@halla.se
+
+[208]
+name=Jonas Htc
+phone=+46 702167403
+
+[209]
+name=Jonas Olbe
+email=jonas.olbe@advokatsamfundet.se
+
+[210]
+name=Jonatan Burger
+email=jonatan.b.jonsson@gmail.com
+
+[211]
+name=Jon Buck
+email=hello@bucktron.com
+phone=+46 760918800
+
+[212]
+name=Jorge Agurcia
+email=j.agurcia@hotmail.com
+phone=+41 762323363
+
+[213]
+name=Jorleny Contreras
+other_phone=+504 32004243
+phone=+39 3773583755
+
+[214]
+name=Jose
+phone=+34 693813409
+
+[215]
+name=JOSE ANGEL
+phone=+504 97669838
+
+[216]
+name=Jose Antonio Leiva Welchez
+other_phone=+504 98410880, +46 26622311
+phone=+504 26622311
+
+[217]
+name=Jose David Leiva
+phone=+1 7139724400
+
+[218]
+name=José Mario López
+email=jmlopez64@yahoo.com
+phone=+504 99901625
+
+[219]
+name=José Yeco
+phone=+504 88484542
+
+[220]
+name=Juan Ramon Schaeffer
+phone=+502 55127793
+
+[221]
+name=Julio Cantero
+phone=+504 99901731
+
+[222]
+name=Julio Mérida
+email=juliomerid@yahoo.com
+phone=+504 97505366
+
+[223]
+name=jörgen wohlert
+email=jorgen.wohlert@gmail.com
+
+[224]
+name=Karin Metell-Cueva
+email=karin.metell@gmail.com
+other_email=karin.metell@sida.se, kmetell@hotmail.com
+other_phone=+46 86456045, +57 3125299868, +46 703014419, +46 733985494
+phone=+46 703583284
+
+[225]
+name=Karin Willen
+email=karin@karinwillen.se
+phone=+46 707407242
+
+[226]
+name=Karin Ögren
+email=karin.ogren@edu.flen.se
+other_email=karin.ogren@flen.se
+other_phone=+46 732394229
+phone=+46 157430995
+
+[227]
+name=Katarina Wiik
+email=katarina.wiik@glocalnet.net
+
+[228]
+name=Kate Newby
+email=newby.kate@gmail.com
+
+[229]
+name=Ken Gray
+email=kengray911@aol.com
+notes=AIM ID: kengray911
+
+[230]
+name=Kevin Hodayer Enamorado Perdomo
+email=khenamorado@bancocci.hn
+
+[231]
+name=Kike Diaz
+phone=+504 98287961
+
+[232]
+name=Kiko Cueva
+phone=99401382
+
+[233]
+name=Kjell-david Johnson
+email=kdj@abic.se
+
+[234]
+name=Klas Abrahamsson
+email=klas.abrahamsson@cremab.se
+
+[235]
+name=Klas Palm
+email=klas@pqm.nu
+
+[236]
+name=Klm
+phone=+1 3129807807
+
+[237]
+name=Klotterkonsulten A K S AB
+other_phone=2116354
+phone=+46 704241271
+address=21 Vinstav
+city=SPÅNGA
+zip=163 54
+
+[238]
+name=Kristina Loftsson
+email=kristina.loftsson@gmail.com
+
+[239]
+name=Kumar Shooting
+phone=+1 9884466667
+
+[240]
+name=Kumar Tuktuk
+phone=+91 9840648879
+
+[241]
+name=Kundservice Företag
+phone=+46 771735311
+
+[242]
+name=Kundservice Privat
+phone=+46 771735300
+
+[243]
+name=Kyl & Klimatservice i Gävleborg
+phone=+46 703254168
+
+[244]
+name=Laila Ekefäll
+phone=+46 313650578
+
+[245]
+name=Lars Bergström
+email=bergstrom@bigertbergstrom.com
+phone=+46 708578653
+
+[246]
+name=Lars Nilsson
+phone=+46 705516786
+
+[247]
+name=Lars Olof Billberg
+phone=+46 702404797
+
+[248]
+name=Lars Son (Ved)
+other_phone=+46 702709240
+phone=+46 703114090
+
+[249]
+name=Lasse Karlsson
+phone=+46 723995402
+
+[250]
+name=Laura
+phone=+504 98509663
+
+[251]
+name=Leif Ivar Pettersson
+email=leif@leifpetterssonsel.se
+other_phone=+46 705614329, 35, 81544
+phone=+46 29314329
+address=Industrigatan 35
+city=Tierp
+zip=81544
+
+[252]
+name=Lena Jarnkvist
+email=lena.jarnkvist@se.atlascopco.com
+
+[253]
+name=Lenin Diaz
+email=lenindiaz222@gmail.com
+phone=+504 31780305
+
+[254]
+name=Lennart Jansson
+email=lennart.jansson@peab.se
+
+[255]
+name=Leonel Rodríguez
+phone=+504 95616471
+
+[256]
+name=Lies Joosten
+email=arpalis@yahoo.com
+other_email=arpalis@cablecolor.hn
+phone=+31 641122301
+
+[257]
+name=Linda Nykopp
+email=lindanykopp@hotmail.com
+phone=+46 704649796
+
+[258]
+name=Linda Shamma
+email=Linda.Shamma@konstfack.se
+other_email=shammalinda@gmail.com
+phone=+46 709399666
+
+[259]
+name=Linda Staaf
+email=linda.staaf@linkoping.se
+
+[260]
+name=Linnéa Nordberg
+phone=+46 760523672
+
+[261]
+name=Lisandro Mauricio Arias Arias Aquino
+phone=+504 99957021
+
+[262]
+name=Lisa Rosengren
+phone=+46 739672576
+
+[263]
+name=Lissbritt Andersson
+phone=+46 739317753
+
+[264]
+name=Lolo Funck Andersson
+email=lolo@lolo.se
+phone=+46 739877920
+
+[265]
+name=Lotta
+phone=+46 723714639
+
+[266]
+name=Lotta Lund
+email=stromsbergskolarinnan@live.se
+phone=+46 702556982
+
+[267]
+name=Louise Dahlgren
+other_phone=1911823
+phone=+46 702356797
+address=19 Ludvigsbergsgatan
+city=STOCKHOLM
+zip=11823
+
+[268]
+name=Love Hansson
+email=love.hansson@konstfack.se
+phone=+46 707654572
+
+[269]
+name=Lovisa Ringborg
+phone=+46 705351139
+
+[270]
+name=ludvig bjärkeback
+email=ludvigbjarkeback@gmail.com
+
+[271]
+name=Luis Antonio Flete
+phone=+46 97327363
+
+[272]
+name=Luis Augustinus
+phone=+504 97081285
+
+[273]
+name=Luis Cueva
+phone=50498034612
+
+[274]
+name=Luis Fernando Bohorquez Poblador Artista
+phone=+57 3002125557
+
+[275]
+name=LUIS MARTINEZ MECÁNICO Copán Ruinas
+phone=+504 99972718
+
+[276]
+name=Lydia Cueva
+email=lydia.cueva@icloud.com
+other_email=lydiaecueva@gmail.com
+other_phone=12634, +46 706456151, +46 722067975
+phone=10
+address=Svandammsvägen 10
+city=Hägersten
+zip=12634
+country=Sweden
+
+[277]
+name=Madeleine Asplund Klingstedt
+email=maddeak@gmail.com
+
+[278]
+name=Madelene Gunnarsson
+phone=+46 702971040
+
+[279]
+name=Magnus Metell
+email=m.metell@telia.com
+phone=+46 86181322
+
+[280]
+name=Malin Enarsson
+email=malin.enarsson@skissernasmuseum.lu.se
+
+[281]
+name=Mamalla Inn
+email=mamallainn@gmail.com
+phone=+46 4427442275
+
+[282]
+name=Manos M
+phone=+57 31224880475
+
+[283]
+name=Manuel Cueva
+phone=+504 99777706
+
+[284]
+name=Manuel Valladares
+phone=+504 89403631
+
+[285]
+name=Marco Cueva
+phone=+504 32055251
+
+[286]
+name=Maria
+phone=+46 704872124
+
+[287]
+name=Maria Bergström
+email=maria.bergstrom@brevet.nu
+
+[288]
+name=Maria Koolen Hellmin
+email=maria.hellmin@comhem.se
+
+[289]
+name=Marianne Hultman
+phone=+46 708303904
+
+[290]
+name=Marianne Jonsson
+email=marianne@mariannejonsson.se
+phone=+46 739860300
+
+[291]
+name=Marianne Pettersson-Soold
+email=marianne@kalligrafi.se
+phone=+46 8222208
+
+[292]
+name=Mariano Rodríguez
+phone=99965838
+
+[293]
+name=Maria Röjvall
+email=maria.rojvall@sll.se
+
+[294]
+name=Maria Teresa Dörner Asenjo
+email=maria.teresa.dorner@telia.com
+other_phone=+46 733800349
+phone=+46 705286041
+
+[295]
+name=Marie-Christine Thorslund Montufar
+email=marie_thorslund_montufar@hotmail.com
+
+[296]
+name=Mario Estrada
+email=mestrada@grupopremierhn.com
+phone=+504 99829703
+
+[297]
+name=Mario Mourra
+phone=+504 31911177
+
+[298]
+name=Mario Uma
+phone=96839692
+
+[299]
+name=Marjorie Hadad
+phone=+504 33907078
+
+[300]
+name=Markus Wiking
+phone=+46 706320025
+
+[301]
+name=Martina MacQueen
+email=martinamacqueen@gmail.com
+
+[302]
+name=Martin Engberg AB
+email=martin@meab.biz
+other_phone=+46 707731779
+phone=+46 850865343
+address=Helmerdalsvägen 32
+city=Farsta
+zip=12352
+notes=Other Address: Box 104 | Farsta 12322
+
+[303]
+name=Martin West
+email=martin.west@swipnet.se
+other_email=martin.west@chello.se, martin.west@statenskonstrad.se
+other_phone=+46 706051008, +46 8267797
+phone=+46 761019701
+
+[304]
+name=Maskinservice Tierp
+phone=+46 293801010
+
+[305]
+name=Mathias Kruger
+email=mathias.kruger@gmail.com
+
+[306]
+name=Mats Larsson Larsson
+email=stromsbergsmats@hotmail.com
+phone=+46 702211761
+
+[307]
+name=Mats Pettersson
+phone=+46 737312291
+
+[308]
+name=Mats Östberg
+email=mats@sratierp.se
+
+[309]
+name=Mauro Cueva
+email=cuevamr@yahoo.com
+phone=+504 99328210
+
+[310]
+name=Maximiliano García
+phone=+504 97301928
+
+[311]
+name=Mayra Arias
+email=mayrae.ariasdw@gmail.com
+other_phone=+504 26514076
+phone=+504 31781440
+
+[312]
+name=Medha Agarwal
+phone=+91 7309130348
+
+[313]
+name=Medicinteknisk apparatur i hemmet (MAH)
+other_phone=+46 812367500, 1, 17173
+phone=+46 812349673
+address=1 Sundbybergsvägen
+city=Solna
+zip=17173
+
+[314]
+name=Mercedes Carolina Granados Rivera
+email=mgranados@bancocci.hn
+
+[315]
+name=Merja Suomalainen
+phone=+46 708640618
+
+[316]
+name=Metrotel
+phone=+504 94691127
+
+[317]
+name=Mia Zeeck
+email=mia.zeeck@kultur.sll.se
+phone=+46 704842269
+
+[318]
+name=Micael Johansson
+email=micael.johansson@karlstad.se
+phone=+46 545407005
+
+[319]
+name=Michi Martinez
+email=mariluchavezlo@yahoo.com
+phone=+504 33920602
+
+[320]
+name=Miguel Cálix
+phone=+504 99480007
+
+[321]
+name=Mikael Broberg
+email=mikaelbroberg1@gmail.com
+
+[322]
+name=Mikael Lindbom
+email=mikael.lindbom@telia.com
+other_phone=+46 87160218, +46 736540697, +46 729615016
+phone=+46 736540320
+
+[323]
+name=Mikael Traung
+phone=+46 707751219
+
+[324]
+name=Mila Gross
+other_phone=88748674
+phone=+46 88748674
+
+[325]
+name=Miriam Flores
+email=meflores@bancocci.hn
+
+[326]
+name=Monica Funck
+other_phone=46191, +46 730488498
+phone=102
+address=Torp 102
+city=Trollhättan
+zip=46191
+
+[327]
+name=Monika Masser
+email=monika@monikamasser.se
+
+[328]
+name=Nadia Francia
+phone=+33 626018357
+
+[329]
+name=Nely Miguel
+phone=+504 97359228
+
+[330]
+name=Nicke Green
+phone=+46 853179027
+
+[331]
+name=Nicke Westermalms Green
+phone=+46 707569027
+
+[332]
+name=Niclaz Salminen
+email=niclaz@stockholmselektriska.se
+
+[333]
+name=Niklas Lehmann
+email=niklas@intra.co.mz
+phone=+258 823116910
+
+[334]
+name=Niklas Pehrson
+email=niklas.pehrson@jatacargo.se
+other_phone=+46 40552354
+phone=+46 708917331
+
+[335]
+name=Nina Sagulin
+email=nina@nysta.se
+phone=+46 708813954
+
+[336]
+name=Nito Diaz Montes De Oca
+phone=+1 2503711735
+
+[337]
+name=Nova
+phone=+46 723667855
+
+[338]
+name=Ola Johansson
+email=ola.johansson@spray.se
+
+[339]
+name=Ola Tambour
+email=verktyg@otdtools.se
+
+[340]
+name=Olof Lundstrom
+email=OLM@nationalmuseum.se
+other_email=lundstrom.olle@comhem.se
+other_phone=+46 768866977, +46 708305330
+phone=+46 851954459
+
+[341]
+name=Olsson Patrik
+email=patrik@frykenmontage.se
+phone=+46 732959423
+
+[342]
+name=Ornsbergs Maleri Info
+email=info@ornsbergs-maleri.se
+
+[343]
+name=Oscar Andersson
+email=oscar@pkup.se
+other_email=oscar@imadeulook.com
+phone=+46 708933849
+
+[344]
+name=Oscar Cueva
+phone=+504 99852397
+
+[345]
+name=Oscar Laufersweiler
+email=oscar@ritator.se
+phone=+46 737318155
+
+[346]
+name=Oswaldo Espinoza
+email=oe2@hotmail.com
+phone=+504 99805051
+
+[347]
+name=Ove Östergren
+email=ove.ostergren@telia.com
+phone=+46 706965754
+
+[348]
+name=Pamela Zuloaga
+other_phone=+47 45918577
+phone=+46 739493654
+
+[349]
+name=Paola Zamora
+email=paolaa.zamora@gmail.com
+
+[350]
+name=Partner Alf
+phone=+46 704169734
+
+[351]
+name=Patrick Nilsson
+phone=+46 702417531
+
+[352]
+name=Patrik Andiné
+email=andine@tjohoo.se
+other_email=patrikandine1@yahoo.se
+other_phone=+46 705826282
+phone=+46 31134551
+
+[353]
+name=Paulos Berglöf
+email=paulosberglof@hotmail.com
+
+[354]
+name=Pelle Perlefelt
+phone=+46 737258742
+
+[355]
+name=Per Frestadius
+phone=+46 733371828
+
+[356]
+name=Per Jakobsson
+email=pelle.jakobsson@gmail.com
+other_phone=+46 29741860
+phone=+46 702142987
+
+[357]
+name=Pernilla Karlsson
+email=pillan@angkarrskolan.se
+
+[358]
+name=Per Niva
+phone=+46 705509654
+address=20 Tavelsjövägen
+city=Årsta
+zip=12059
+country=Sverige
+
+[359]
+name=Per Wingqvist
+email=per@astando.se
+other_email=wingqvist@gmail.com
+phone=+46 768441040
+
+[360]
+name=Peter Cederblom
+phone=+46 705718077
+
+[361]
+name=Peter Claesson
+email=claesson@indigoincoming.com
+other_email=info@indigoincoming.com, peter.claesson@undp.org
+address=peter.claesson@undp.org Suecia
+
+[362]
+name=peter.lingstrom@telia.com
+email=peter.lingstrom@telia.com
+
+[363]
+name=Peter Möller
+email=peter.moller@naisvefa.se
+
+[364]
+name=petra.hultenius@stockholm.se
+email=petra.hultenius@stockholm.se
+
+[365]
+name=Petter Yxell
+email=petter.yxell@boras.se
+phone=+46 707518760
+
+[366]
+name=Philip Carcamo
+email=philipcarcamo@hotmail.com
+phone=+46 739965064
+
+[367]
+name=Pia Mauno
+phone=+46 733490532
+
+[368]
+name=Pilar Leiva
+other_phone=+504 96496949
+phone=+504 22341869
+
+[369]
+name=PO Hagström
+email=pohagstrom@gmail.com
+phone=+46 705563679
+
+[370]
+name=Programgruppen S44
+email=program@studio44.se
+
+[371]
+name=Pär Lindblom
+phone=+46 768866976
+
+[372]
+name=Pär Rosengren
+email=par@p-rosengren.com
+
+[373]
+name=Radiotaxi
+other_phone=22324067, 98497764
+phone=+46 22324067
+
+[374]
+name=Radu
+phone=+91 9840478169
+
+[375]
+name=Rajesh Chennai
+email=eeswariraj@rediffmail.com
+phone=+91 9894540343
+
+[376]
+name=Ralf Hanicke Arkitekt & Designer
+phone=+46 736519126
+
+[377]
+name=Rasmus Mälarlaser
+phone=+46 171711589
+
+[378]
+name=Raul Cueva
+phone=+504 31504168
+
+[379]
+name=Raul Welchez
+email=jrwelchez@gmail.com
+phone=+504 99798530
+
+[380]
+name=Restaurang Kryddan
+phone=+46 8393962
+
+[381]
+name=Reynaldo Nolasco
+phone=+504 89570751
+
+[382]
+name=Rickard Undevik -kraftverket
+phone=+46 707482954
+
+[383]
+name=Ricksha Malapuram
+phone=+91 928316169915
+
+[384]
+name=Robert Bergqvist
+email=robert.bergqvist@kgcverktyg.se
+
+[385]
+name=Robert Metell
+email=robert@metell.se
+other_email=me@telldesign.se
+other_phone=+46 733963639
+phone=+46 707619242
+
+[386]
+name=Robert Mood
+phone=+46 709515016
+
+[387]
+name=Roberto Contreras
+phone=+504 33915281
+
+[388]
+name=Rolando Milla
+phone=+504 31779936
+
+[389]
+name=Rosa Leiva
+email=rosall.welch@gmail.com
+other_phone=+504 22342621, +504 31906282, +504 26513843, +504 94725454
+phone=+504 31985302
+
+[390]
+name=Rosa Lidia Leiva
+phone=+504 26513843
+
+[391]
+name=Sachsska Ungdomsenheten
+phone=+46 86164614
+
+[392]
+name=Sandra Ståhl
+email=Sandra.Stahl@bostadsbolaget.se
+
+[393]
+name=Sanna Trädgård Jakobsson
+phone=+46 732670123
+
+[394]
+name=Sara Eriksson
+email=sarameriksson@hotmail.com
+
+[395]
+name=Sara Landare Von schantz
+phone=+46 735134558
+
+[396]
+name=S. Banegas
+phone=+504 96442497
+
+[397]
+name=Schenker AB
+phone=+46 243257601
+
+[398]
+name=Schibsted Centralen AB
+phone=46856259550
+
+[399]
+name=Segermo Entreprenad AB
+other_phone=7, +46 54569891
+phone=+46 702675050
+address=Frögatan 7, Karlstad
+city=Karlstad Karlstad
+
+[400]
+name=Simon Häggblom
+email=simon@transformart.se
+other_email=simon@simka.se
+notes=Category: Negocios
+
+[401]
+name=Simon Norrsveden
+email=betelmusik@tele2.se
+
+[402]
+name=Sodermalmsbil Info
+email=info@sodermalmsbil.se
+
+[403]
+name=Sofia Palmgren
+email=sofia.palmgren@regionstockholm.se
+
+[404]
+name=Solskyddsmästarna
+email=markiser@euromail.se
+
+[405]
+name=Sotare
+phone=+46 29350437
+
+[406]
+name=staffan.bjrklund@yahoo.se
+email=staffan.bjrklund@yahoo.se
+
+[407]
+name=Stefan Ekström
+email=stefan.ekstrom@stockholmvatten.se
+
+[408]
+name=Stefan Hagdahl
+email=Stefan.hagdahl@sl.se
+
+[409]
+name=Stefan Lindkvist
+email=hansstefan.lindqvist@tele2.se
+phone=+46 739659334
+
+[410]
+name=Stefano Beccari
+email=s.beccari@ebox.tninet.se
+other_email=stefano.beccari@tele2.se
+other_phone=+39 3409755883, +91 9962823092, +91 8939401509, +46 709181795
+phone=+39 3472824858
+
+[411]
+name=Stefan Wiik
+email=stefan@manusfamiljen.com
+
+[412]
+name=Stockholmsbilen
+phone=+46 702790233
+
+[413]
+name=Stockholms Industrilack
+phone=+46 87491055
+
+[414]
+name=StuckBema
+phone=+46 858010040
+
+[415]
+name=Suomalainen Merja
+phone=+46 735808469
+
+[416]
+name=Susann Brännström
+email=susannbrannstrom@hotmail.com
+other_email=susannbrannstrom@gmail.com
+other_phone=+46 86406292, 38
+phone=+46 704665971
+city=Stockholm
+
+[417]
+name=Susanne Andersson Kopp
+email=Susanne.Andersson.Kopp@kultur.sll.se
+
+[418]
+name=Susanne Johansson
+email=onsdagtillonsdag@gmail.com
+phone=+46 706319363
+
+[419]
+name=Svante Loven
+phone=+46 730276317
+
+[420]
+name=Svart-EK
+email=Svart-EKF@googlegroups.com
+
+[421]
+name=Svea Ekonomi Erika
+phone=+46 87359064
+
+[422]
+name=Sven-Olov Wallenstein
+phone=+46 735929615
+
+[423]
+name=Svets Sam Sansudin
+phone=+46 767225495
+
+[424]
+name=Sävström Krister
+email=krister.savstrom@gmail.com
+phone=+46 709187820
+
+[425]
+name=Sören Bergström
+email=soren.sorby@gmail.com
+
+[426]
+name=Tanja Rosengren
+email=tanja_rosengren@yahoo.se
+other_phone=+46 739566601
+phone=+46 708515952
+
+[427]
+name=Tanya Clementson
+email=copanconnections@gmail.com
+other_email=twistedtanyas@hotmail.com
+phone=+504 6514182
+
+[428]
+name=Tedy Perez (Taxi Teg)
+phone=+504 96732349
+
+[429]
+name=Teresia Frisk
+phone=+46 709520792
+
+[430]
+name=Terminus Spedition Och Transport AB
+phone=+46 317554536
+
+[431]
+name=Theresa Kilbane
+email=tkilbane@unicef.org
+
+[432]
+name=Therese Magnusson
+email=theresemagnusson00@gmail.com
+
+[433]
+name=Thomas Andersson
+email=thomas41003@telia.com
+phone=+46 703840629
+
+[434]
+name=Thomas Lindström
+email=thomas@kolbiten.se
+phone=+46 705914996
+
+[435]
+name=Tia Jumbe
+phone=+46 704248979
+
+[436]
+name=Tierpsbilen
+other_phone=81540, +46 731818717, +46 29366677, 46731818717
+phone=26
+address=LÃ¶vÃ¥svÃ¤gen 26
+city=Tierp
+zip=81540
+
+[437]
+name=Tierps Byggteknik
+phone=+46 702359210
+
+[438]
+name=Tina Ekström
+email=tiaekstr@gmail.com
+
+[439]
+name=Tjalle
+email=tjalle@globentak.se
+other_phone=12234, +46 702153130
+phone=345
+address=Nynäsvägen 345
+city=Enskede
+zip=12234
+
+[440]
+name=Tomas Edetun
+email=t.edetun@gmail.com
+phone=+46 708837478
+
+[441]
+name=Tomas Ström
+phone=+46 87046045
+
+[442]
+name=Tom Bogaard
+phone=+46 704872609
+
+[443]
+name=Tommy
+phone=+46 730982820
+
+[444]
+name=Toni Rios
+phone=89723741
+
+[445]
+name=Toño Lainez
+other_phone=+46 86048392, +46 733278114
+phone=+46 734326710
+
+[446]
+name=Tony Quesada
+phone=+504 99857793
+
+[447]
+name=Torbjörn Hallström
+email=torbjorn.hallstrom@stockholm.se
+other_phone=+46 850817393, +46 86481918
+phone=+46 707257694
+
+[448]
+name=Torgny (Gammal)
+phone=+46 733059771
+
+[449]
+name=Torgny (Ny)
+other_phone=+46 731818717
+phone=+46 29366677
+
+[450]
+name=Torunn Skoglund
+email=torunn.skoglund@regionstockholm.se
+
+[451]
+name=Tove Axelsson
+email=toveaxelsson01@gmail.com
+
+[452]
+name=Tove Faye-Wevle
+other_phone=+46 736525555
+phone=+46 87148525
+
+[453]
+name=Tove Hultman-Boye
+email=tovehultmanboye@hotmail.com
+phone=+46 704618849
+
+[454]
+name=Traform Info
+email=info@traform.se
+
+[455]
+name=Tuktuk 2
+phone=+1 9283169915
+
+[456]
+name=Ulf Rollof
+email=ulf@rollof.com
+phone=+46 707670063
+
+[457]
+name=Ulla
+phone=+46 702767386
+
+[458]
+name=Ulrika Modéer
+email=umodeer@yahoo.com
+other_email=ulrikamodeer@yahoo.com
+phone=+46 768514212
+
+[459]
+name=Urban Tjäder
+phone=+46 706438441
+
+[460]
+name=Valery Sierra
+phone=+504 89379007
+
+[461]
+name=Ved Kari
+phone=+46 707772323
+
+[462]
+name=Vera Karen Militza Monteverde
+phone=+46 737082820
+address=Tjärhovsgatan 10, Stockholm
+
+[463]
+name=Vickan
+email=vivecabusckhakans@gmail.com
+other_email=studio@marcocueva.com, marcocueva@outlook.com, marco.cueva@yahoo.com, fam.cueva@
+other_phone=81596, +46 739281788, 17, +46 708847709, 75327, +46 706113986
+phone=9
+address=Norra Dorkarbyvägen 9
+city=Strömsbergs Bruk
+state=Stockholm County
+zip=81596
+country=Sverige
+
+[464]
+name=Victor Saborio
+email=vsaborio@hotmail.com
+
+[465]
+name=Viera Larsson
+email=viera.larsson@visual.se
+phone=+46 708239114
+
+[466]
+name=Viktor Rosengren
+other_phone=+46 762334587
+phone=+46 735954555
+
+[467]
+name=‎Vittorio Stefani
+phone=+39 3898522463
+
+[468]
+name=wwexport
+phone=+91 9791874934
+
+[469]
+name=Yemisi Wilson
+phone=+46 762931703
+
+[470]
+name=Ylva Landoff Lindberg
+email=ylva.lan.lin@gmail.com
+
+[471]
+name=Åsa Forsberg
+phone=+46 705182966
+
+[472]
+name=Åsa Kledzik
+email=Asa.Kledzik@hifab.se
+

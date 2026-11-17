@@ -1,0 +1,27 @@
+# 1. Declare custom fields first
+field other_email = "Other Email"
+field other_phone = "Other Phone"
+
+# 2. Define tabs for the contact detail view
+view "Contact" = name, email, other_email, phone, other_phone, mobile, workphone
+view "Address" = address, city, state, zip, country
+view "Other" = notes
+
+# 3. Configure main list columns (16 chars prevents +46 phone clipping)
+set index_format=" {name:30} {email:36|other_email} {phone:16|other_phone|mobile} {city:18|notes}"
+
+# 4. Optional quality-of-life settings
+set sort_field=name
+set show_all_emails=true
+
+# Automatically save database on exit
+set autosave=true
+
+# Command used to start the web browser
+set www_command=w3m
+
+# address style [eu|us|uk]
+set address_style=eu
+
+# Prevent double entry
+set add_email_prevent_duplicates=false
