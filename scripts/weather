@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CITY='TIERP,se'
-API_KEY='551cf557a8f7aa0244f2e5f9104b4a6e'
+API_KEY='XXXXXXXXXXXXXXXXXXX'
 UNITS='metric' 
 API_ENDPOINT='http://api.openweathermap.org/data/2.5/weather'
 
