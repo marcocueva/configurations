@@ -2,26 +2,40 @@
 set realname = "Marco"
 set editor   = "nvim"
 
+set crypt_use_gpgme = no
+
 # --- 2. Paths & Mailboxes ---
 set folder       = "~/.mail"
 set mbox_type    = Maildir
 set spoolfile    = "+studio/INBOX"
 set mailcap_path = "~/.config/neomutt/mailcap"
 
-# Match these to your mbsync 'Path' settings
-mailboxes -label "Studio" "+studio/INBOX" "+studio/Sent"
-mailboxes -label "Mail"  "+mail/INBOX" "+mail/Sent"
-mailboxes -label "Inkorg" "+Inkorg/INBOX" "+Inkorg/Sent"
-mailboxes -label "Yahoo"  "+yahoo/INBOX"  "+yahoo/Sent"
+# Automatically use the address that received the mail when replying
+set reverse_name = yes
+
+# List all your valid email addresses so NeoMutt recognizes them
+alternates studio@marcocueva.com mail@marcocueva.com inkorg@marcocueva.com marco.cueva@yahoo.com
+
+# Optional: When creating a brand new email (not a reply), default to your primary address
+set from = "studio@marcocueva.com"
+
+# Give each account a clear label (or Nerd Font icon / tag)
+named-mailboxes "[STU] Inbox"  "+studio/INBOX"
+named-mailboxes "  └ Sent"     "+studio/Sent"
+named-mailboxes "[MAL] Inbox"  "+mail/INBOX"
+named-mailboxes "  └ Sent"     "+mail/Sent"
+named-mailboxes "[INK] Inbox"  "+inkorg/INBOX"
+named-mailboxes "  └ Sent"     "+inkorg/Sent"
+named-mailboxes "[YAH] Inbox"  "+yahoo/INBOX"
+named-mailboxes "  └ Sent"     "+yahoo/Sent"
 
 # --- 3. Sidebar Configuration ---
 set sidebar_visible       = yes
 set sidebar_width         = 25
-set sidebar_short_path    = yes
-set sidebar_folder_indent = yes
-set sidebar_format        = "%B%* [%N]"
+set sidebar_short_path    = no
+set sidebar_folder_indent = no
+set sidebar_format        = "%D%* [%N]"
 set sidebar_delim_chars   = "/"
-set sidebar_indent_string = "  "
 
 # Sidebar Navigation
 bind index,pager \t         sidebar-next
@@ -45,10 +59,9 @@ bind generic k previous-entry
 # Use 'ö' to exit menus (like the 'To:' or 'Compose' menu)
 bind index,pager,attach,compose ö exit
 
-# Use 'ö' to cancel a prompt in the editor (the bottom line)
-# For the Editor (To, Subject prompts), simulate a Ctrl-g
+# For the Editor (To, Subject prompts), simulate Ctrl-g to cancel
 bind editor ö noop
-macro editor ö "<obfuscate-key-sequence>^g"
+macro editor ö "\Cg" "Cancel prompt"
 
 # Generic safety catch-all
 bind generic ö exit
@@ -56,28 +69,21 @@ bind generic ö exit
 # Mark all unread messages in the current folder as read
 macro index L "<tag-pattern>~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all messages as read"
 
-# Define where your Trash is (adjust the path to match your setup)
-set trash = "+Trash"
+# Default fallback Trash (override per-account in ~/.config/neomutt/accounts/*)
+set trash = "+studio/Trash"
 
-# Automatically move 'deleted' messages to the Trash folder
-# instead of just marking them for purging.
+# Automatically move deleted messages to the Trash folder
 bind index d delete-message
-# Bind 'u' to undelete (the default, but good to keep track of)
 bind index u undelete-message
 
 # --- 5. HTML Handling & Link Extraction ---
 alternative_order text/html text/plain
 auto_view text/html text/calendar application/ics
 
-# Fixed U macro: Using single quotes on the outside to keep italics working
-macro pager U "<pipe-message>urlview<enter>"  #"View Links with urlview"
-
-# L: Clean Interactive w3m
-macro pager L "<enter-command>set pipe_decode=yes<enter><pipe-entry>w3m -T text/html -I %{charset} -config ~/.config/w3m/mutt_config<enter><enter-command>set pipe_decode=no<enter>" # "Interactive w3m (Clean & Fast)"
+macro pager U "<pipe-message>urlview<enter>" "View Links with urlview"
+macro pager L "<enter-command>set pipe_decode=yes<enter><pipe-entry>w3m -T text/html -I %{charset} -config ~/.config/w3m/mutt_config<enter><enter-command>set pipe_decode=no<enter>" "Interactive w3m (Clean & Fast)"
 
 # --- 6. Sync & Address Book ---
-
-# 'S' runs mbsync for all accounts
 macro index S "<shell-escape>mbsync -a<enter><check-stats>" "Sync all mail"
 
 set query_command = "abook --mutt-query '%s'"
@@ -90,46 +96,52 @@ set sort_aux    = reverse-last-date-received
 set menu_scroll = yes
 set timeout     = 10
 
-
-# --- 8. Account Hooks & Dynamic Colors ---
-
-# Studio - Cyan (color37)
-folder-hook "studio/*" "source ~/.config/neomutt/accounts/studio; color status color115 default"
-
-# Combi - Magenta (color162)
-folder-hook "mail_combi/*" "source ~/.config/neomutt/accounts/combi; color status color133 default"
-
-# Inkorg - Yellow (color136)
-folder-hook "Inkorg/*" "source ~/.config/neomutt/accounts/inkorg; color status color222 default"
-
-# Yahoo - Purple (color134)
-folder-hook "yahoo/*" "source ~/.config/neomutt/accounts/yahoo; color status color183 default"
-
-# Sent Folder Color (Complementary)
-# This will highlight Sent messages in the index with the colors we picked earlier
-color index color166 default "~f studio/Sent"
-color index color33  default "~f Inkorg/Sent"
-color index color106 default "~f mail_combi/Sent"
-color index color64  default "~f yahoo/Sent"
-
-# --- 9. Theming ---
+# --- 8. Base Theming (Loaded BEFORE folder-hooks so dynamic colors win) ---
 source /usr/share/neomutt/colorschemes/solarized-dark-256.neomuttrc
 
-color index          brightyellow  default  "~U"
-color index          brightcyan    default  "~N"
+# Differentiate sidebar states clearly
+color sidebar_spoolfile color37       default   # Primary Studio Inbox (Cyan)
+color sidebar_new       brightyellow  default   # Any inbox with new unread mail
+color sidebar_flagged   color136      default   # Mailboxes with flagged messages
+color sidebar_ordinary  color246      default   # Inactive/read mailboxes
+color sidebar_highlight black         color37   # Currently selected row in sidebar
+color sidebar_indicator black         color115  # Currently open mailbox
+color sidebar_divider   color240      default
+# --color index           brightyellow  default  "~U"
+# --color index           brightcyan    default  "~N"
+# --
+# --color sidebar_new     color37       default
+# --color sidebar_flagged color136      default
+# --color sidebar_divider color240      default
+# --
+# --color sidebar_highlight black       white
+# --color sidebar_indicator brightmagenta default
 
-# These apply to folders with NEW mail:
-# Note: NeoMutt colors the WHOLE line based on status, 
-# not specific folders by name.
-color sidebar_new    color37   default  # Studio-ish Cyan
-color sidebar_flagged color136  default  # Inkorg-ish Gold
-color sidebar_divider color240  default  # Subtle grey divider
+# --- 9. Account Hooks & Dynamic Colors ---
+# Studio - Cyan
+folder-hook "studio/*" "source ~/.config/neomutt/accounts/studio; color status color115 default; uncolor index *; color index color166 default ~A"
+folder-hook "studio/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
 
-color sidebar_highlight black      white
-color sidebar_indicator brightmagenta default
+# Mail - Magenta (aligned with ~/.mail/mail/ in mbsyncrc)
+folder-hook "mail/*" "source ~/.config/neomutt/accounts/combi; color status color133 default; uncolor index *; color index color106 default ~A"
+folder-hook "mail/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
+
+# Inkorg - Yellow
+folder-hook "Inkorg/*" "source ~/.config/neomutt/accounts/inkorg; color status color222 default; uncolor index *; color index color33 default ~A"
+folder-hook "Inkorg/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
+
+# Yahoo - Purple
+folder-hook "yahoo/*" "source ~/.config/neomutt/accounts/yahoo; color status color183 default; uncolor index *; color index color64 default ~A"
+folder-hook "yahoo/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
 
 # --- 10. Account Switching Macros ---
 macro index 1 "<change-folder>+studio/INBOX<enter>" "Go to Studio"
-macro index 2 "<change-folder>+mail_combi/INBOX<enter>" "Go to Combi"
-macro index 3 "<change-folder>+Inkorg/INBOX<enter>" "Go to Inkorg"
-macro index 4 "<change-folder>+yahoo/INBOX<enter>" "Go to Yahoo"
+macro index 2 "<change-folder>+mail/INBOX<enter>"   "Go to Mail"
+macro index 3 "<change-folder>+inkorg/INBOX<enter>" "Go to Inkorg"
+macro index 4 "<change-folder>+yahoo/INBOX<enter>"  "Go to Yahoo"
+
+# --- Compose Screen Account Switcher ---
+macro compose <F1> "<enter-command>source ~/.config/neomutt/accounts/studio<enter><edit-from><kill-line>Marco <studio@marcocueva.com><enter>" "Send from Studio"
+macro compose <F2> "<enter-command>source ~/.config/neomutt/accounts/combi<enter><edit-from><kill-line>Marco <mail@marcocueva.com><enter>"   "Send from Mail"
+macro compose <F3> "<enter-command>source ~/.config/neomutt/accounts/inkorg<enter><edit-from><kill-line>Marco <inkorg@marcocueva.com><enter>" "Send from Inkorg"
+macro compose <F4> "<enter-command>source ~/.config/neomutt/accounts/yahoo<enter><edit-from><kill-line>Marco <marco.cueva@yahoo.com><enter>" "Send from Yahoo"

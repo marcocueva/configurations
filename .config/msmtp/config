@@ -15,15 +15,15 @@ user           studio@marcocueva.com
 passwordeval   "pass email/studio"
 
 # --- Combi Account ---
-account        Combi
+account        mail
 host           mailcluster.loopia.se
 port           587
 from           mail@marcocueva.com
 user           mail@marcocueva.com
-passwordeval   "pass email/mail_combi"
+passwordeval   "pass email/mail"
 
 # --- Inkorg Account ---
-account        Inkorg
+account        inkorg
 host           mailcluster.loopia.se
 port           587
 from           inkorg@marcocueva.com
@@ -32,7 +32,7 @@ passwordeval   "pass email/inkorg"
 
 # --- Yahoo Account ---
 account yahoo
-host smtp.yahoo.com
+host smtp.mail.yahoo.com
 port 465
 from marco.cueva@yahoo.com
 user marco.cueva@yahoo.com
