@@ -71,8 +71,8 @@ IMAPStore inkorg-remote
 Account inkorg
 
 MaildirStore inkorg-local
-Path ~/.mail/Inkorg/
-Inbox ~/.mail/Inkorg/INBOX
+Path ~/.mail/inkorg/
+Inbox ~/.mail/inkorg/INBOX
 Subfolders Verbatim
 
 Channel Inkorg

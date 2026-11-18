@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ENCRYPT_CONFIG="$HOME/.config/yadm/encrypt"
+ARCHIVE_FILE="$HOME/.local/share/yadm/archive"
+
+# Only run if the encrypt manifest exists
+if [[ -f "$ENCRYPT_CONFIG" ]]; then
+    echo "Running yadm encrypt..."
+    yadm encrypt
+
+    # Stage the updated encrypted archive if it exists
+    if [[ -f "$ARCHIVE_FILE" ]]; then
+        yadm add "$ARCHIVE_FILE"
+    fi
+fi
