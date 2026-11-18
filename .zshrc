@@ -91,6 +91,7 @@ function y() {
 source <(fzf --zsh)
 
 # eval $(ssh-agent)
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Zoxide (Directory navigation)
 if command -v zoxide 1>/dev/null 2>&1; then
