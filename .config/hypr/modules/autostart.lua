@@ -17,6 +17,8 @@ function M.setup(config)
 			"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland QT_QPA_PLATFORM XDG_SESSION_TYPE"
 		)
 
+		hl.exec_cmd("dbus-update-activation-environment") --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK
+
 		-- Restart Portal Service cleanly via systemd instead of launching binaries manually
 		hl.exec_cmd("systemctl --user restart xdg-desktop-portal-hyprland xdg-desktop-portal")
 

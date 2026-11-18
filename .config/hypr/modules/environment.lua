@@ -17,6 +17,7 @@ function M.setup()
 		{ "XDG_SESSION_TYPE", "wayland" },
 		{ "GBM_BACKEND", "nvidia-drm" },
 		{ "__GLX_VENDOR_LIBRARY_NAME", "nvidia" },
+		{ "SSH_AUTH_SOCK,$XDG_RUNTIME_DIR/ssh-agent.socket" },
 	}
 
 	-- General Configuration
