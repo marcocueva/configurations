@@ -168,18 +168,28 @@ require("lazy").setup({
 	"L3MON4D3/LuaSnip",
 	"saadparwaiz1/cmp_luasnip",
 	"rafamadriz/friendly-snippets",
-	"github/copilot.vim",
+	{
+		"github/copilot.vim",
+		enabled = false,
+	},
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "main",
 		dependencies = {
-			"github/copilot.vim",
+			-- "github/copilot.vim",
 			"nvim-lua/plenary.nvim",
 		},
 		build = "make tiktoken",
 		opts = {
-			model = "gpt-4o", -- Explicitly set a stable default model instead of relying on auto-discovery
-			default_agent = "copilot",
+			-- model = "gpt-6 Luna", -- Explicitly set a stable default model instead of relying on auto-discovery
+			-- default_agent = "copilot",
+			debug = true,
+			show_help = false,
+			mappings = {
+				complete = {
+					insert = "",
+				},
+			},
 		},
 	},
 	{
