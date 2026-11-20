@@ -152,7 +152,11 @@ require("lazy").setup({
 			require("wrapping").setup()
 		end,
 	},
-
+	-- multiline editing:
+	{
+		"mg979/vim-visual-multi",
+		branch = "master",
+	},
 	-- completion
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-calc",

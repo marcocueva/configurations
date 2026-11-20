@@ -70,7 +70,7 @@
 
     "custom/mail": {
         "format": "📬 : {}",
-        "interval": 5,
+        "interval": 2,
         "exec": "~/.config/waybar/scripts/mail-count.sh",
         "return-type": "json",
         "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"special:mail\" })'",

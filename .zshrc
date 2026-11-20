@@ -112,3 +112,11 @@ export ESCDELAY=25
 # eval $(ssh-agent)
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# -- gpg
+unlock-gpg() {
+  read -s "PASS?GPG Passphrase: " && echo
+  print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset DF0658616403539E855A36030FD13492994653FD
+  print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset D7D6C5D0B510555B47704FEAE09EBE83A13D97E2
+  unset PASS
+}

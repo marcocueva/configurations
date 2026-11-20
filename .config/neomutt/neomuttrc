@@ -84,7 +84,8 @@ macro pager U "<pipe-message>urlview<enter>" "View Links with urlview"
 macro pager L "<enter-command>set pipe_decode=yes<enter><pipe-entry>w3m -T text/html -I %{charset} -config ~/.config/w3m/mutt_config<enter><enter-command>set pipe_decode=no<enter>" "Interactive w3m (Clean & Fast)"
 
 # --- 6. Sync & Address Book ---
-macro index S "<shell-escape>mbsync -a<enter><check-stats>" "Sync all mail"
+# --- macro index S "<shell-escape>mbsync -a<enter><check-stats>" "Sync all mail"
+macro index S "<shell-escape>systemctl --user start mbsync.service<enter><check-stats>" "Sync all mail"
 
 set query_command = "abook --mutt-query '%s'"
 macro index,pager A "<pipe-message>abook --add-email<enter>" "Add to abook"
@@ -123,7 +124,7 @@ folder-hook "studio/*" "source ~/.config/neomutt/accounts/studio; color status c
 folder-hook "studio/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
 
 # Mail - Magenta (aligned with ~/.mail/mail/ in mbsyncrc)
-folder-hook "mail/*" "source ~/.config/neomutt/accounts/combi; color status color133 default; uncolor index *; color index color106 default ~A"
+folder-hook "mail/*" "source ~/.config/neomutt/accounts/mail; color status color133 default; uncolor index *; color index color106 default ~A"
 folder-hook "mail/INBOX" "uncolor index *; color index brightyellow default ~U; color index brightcyan default ~N"
 
 # Inkorg - Yellow
@@ -142,6 +143,6 @@ macro index 4 "<change-folder>+yahoo/INBOX<enter>"  "Go to Yahoo"
 
 # --- Compose Screen Account Switcher ---
 macro compose <F1> "<enter-command>source ~/.config/neomutt/accounts/studio<enter><edit-from><kill-line>Marco <studio@marcocueva.com><enter>" "Send from Studio"
-macro compose <F2> "<enter-command>source ~/.config/neomutt/accounts/combi<enter><edit-from><kill-line>Marco <mail@marcocueva.com><enter>"   "Send from Mail"
+macro compose <F2> "<enter-command>source ~/.config/neomutt/accounts/mail<enter><edit-from><kill-line>Marco <mail@marcocueva.com><enter>"   "Send from Mail"
 macro compose <F3> "<enter-command>source ~/.config/neomutt/accounts/inkorg<enter><edit-from><kill-line>Marco <inkorg@marcocueva.com><enter>" "Send from Inkorg"
 macro compose <F4> "<enter-command>source ~/.config/neomutt/accounts/yahoo<enter><edit-from><kill-line>Marco <marco.cueva@yahoo.com><enter>" "Send from Yahoo"

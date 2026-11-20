@@ -1,5 +1,0 @@
-set from = "mail@marcocueva.com"
-set sendmail = "/usr/bin/msmtp -a mail"
-set spoolfile = "+mail_combi/INBOX"
-set record = "+mail/Sent"
-set postponed = "+mail_combi/Drafts"
