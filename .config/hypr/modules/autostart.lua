@@ -10,14 +10,17 @@ function M.setup(config)
 		hl.exec_cmd("xrdb -merge ~/.Xresources &")
 
 		-- Environment setup for DBus & Systemd (Wayland/Hyprland)
-		hl.exec_cmd(
-			"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland QT_QPA_PLATFORM XDG_SESSION_TYPE"
-		)
+		-- hl.exec_cmd(
+		-- 	"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland QT_QPA_PLATFORM XDG_SESSION_TYPE"
+		-- )
 		hl.exec_cmd(
 			"systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland QT_QPA_PLATFORM XDG_SESSION_TYPE"
 		)
 
-		hl.exec_cmd("dbus-update-activation-environment") --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK
+		hl.exec_cmd(
+			"dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS SSH_AUTH_SOCK"
+		)
+		--		hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK")
 
 		-- Restart Portal Service cleanly via systemd instead of launching binaries manually
 		hl.exec_cmd("systemctl --user restart xdg-desktop-portal-hyprland xdg-desktop-portal")
@@ -49,10 +52,17 @@ function M.setup(config)
 		hl.exec_cmd('[workspace 1 silent] kitty --title "MainSession"')
 		hl.exec_cmd("[workspace 2 silent] " .. browser)
 		hl.exec_cmd("[workspace 3 silent] kitty --class=com.tiled.yazi -e yazi")
-		hl.exec_cmd("[workspace 4 silent] thunderbird")
+		--  hl.exec_cmd("[workspace 4 silent] thunderbird")
 
 		-- Special Workspaces
-		hl.exec_cmd("[workspace special:mail silent] " .. terminal .. " --class floating_mutt -e neomutt")
+		hl.exec_cmd(
+			"[workspace special:mail silent] "
+				.. terminal
+				.. [[ --class floating_mutt -e sh -c 'until gpg-connect-agent "keyinfo --list" /bye 2>/dev/null | grep -q "D7D6C5D0B510555B47704FEAE09EBE83A13D97E2 D - - 1"; do sleep 1; done; exec neomutt']]
+		)
+
+		--	hl.exec_cmd("[workspace special:mail silent] " .. terminal .. " --class floating_mutt -e neomutt")
+
 		hl.exec_cmd(
 			"[workspace special:music silent] "
 				.. terminal

@@ -114,9 +114,31 @@ export ESCDELAY=25
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # -- gpg
+# unlock-gpg() {
+#   read -s "PASS?GPG Passphrase: " && echo
+#   print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset DF0658616403539E855A36030FD13492994653FD
+#   print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset D7D6C5D0B510555B47704FEAE09EBE83A13D97E2
+#   unset PASS
+# }
+
+# -- gpg: unlock encryption subkey once per session if locked
 unlock-gpg() {
-  read -s "PASS?GPG Passphrase: " && echo
-  print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset DF0658616403539E855A36030FD13492994653FD
-  print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset D7D6C5D0B510555B47704FEAE09EBE83A13D97E2
+  local keygrip="D7D6C5D0B510555B47704FEAE09EBE83A13D97E2"
+  gpgconf --launch gpg-agent >/dev/null 2>&1
+
+  if gpg-connect-agent 'keyinfo --list' /bye 2>/dev/null | grep -q "$keygrip D - - 1"; then
+    return 0
+  fi
+
+  local PASS
+  read -rs "PASS?GPG Passphrase (unlocks mbsync & NeoMutt): " && echo
+  [[ -z "$PASS" ]] && return 1
+
+  if print -rn -- "$PASS" | /usr/libexec/gpg-preset-passphrase --preset "$keygrip"; then
+    echo "GPG key cached for 24h."
+  else
+    echo "Failed to preset GPG key."
+  fi
   unset PASS
 }
+unlock-gpg
