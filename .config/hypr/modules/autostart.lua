@@ -53,6 +53,7 @@ function M.setup(config)
 		hl.exec_cmd("[workspace 2 silent] " .. browser)
 		hl.exec_cmd("[workspace 3 silent] kitty --class=com.tiled.yazi -e yazi")
 		--  hl.exec_cmd("[workspace 4 silent] thunderbird")
+		hl.exec_cmd("(sleep 300 && hyprctl dispatch exec '[workspace 4 silent] thunderbird') &")
 
 		-- Special Workspaces
 		hl.exec_cmd(

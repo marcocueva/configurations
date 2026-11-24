@@ -109,6 +109,7 @@ vim.keymap.set("n", "<leader>ll", function()
 	require("lint").try_lint()
 end, { desc = "Run lint" })
 
+-- Diagnostics
 local function toggle_diagnostic_loclist()
 	-- Check if a location list window is already open
 	for _, win in ipairs(vim.fn.getwininfo()) do
@@ -124,6 +125,11 @@ end
 
 -- Map <leader>ld to toggle the diagnostic location list
 vim.keymap.set("n", "<leader>ld", toggle_diagnostic_loclist, { desc = "Toggle diagnostic location list" })
+
+-- Map <leader>lw to show the diagnostic in a floating window
+vim.keymap.set("n", "<leader>lw", function()
+	vim.diagnostic.open_float()
+end)
 
 -- Map <leader>rw to toggle the diagnostic location list
 vim.keymap.set("n", "<leader>rw", function()
