@@ -46,28 +46,28 @@ prepend_rules = [
 
   # 3. Images: Edit/view directly (put xdg-open last)
   { url = "*.{jpg,jpeg,png,webp,psd,jxl,avif}", use = [
+    "open",
     "gimp",
     "reveal",
-    "open",
   ] },
   { mime = "image/*", use = [
+    "open",
     "gimp",
     "reveal",
-    "open",
   ] },
 
   # 4. HTML / Web
   { url = "*.{html,htm}", use = [
     "w3m",
+    "open",
     "edit",
     "reveal",
-    "open",
   ] },
   { mime = "text/html", use = [
     "w3m",
+    "open",
     "edit",
     "reveal",
-    "open",
   ] },
 
   # 5. Documents / Config / Code
@@ -110,7 +110,7 @@ prepend_rules = [
 
 rules = [
   # Folders
-  { url = "*/", use = ["edit", "open", "reveal"] },
+  { url = "*/", use = ["open", "reveal", "edit"] },
 
   # Text & Code Fallbacks
   { mime = "text/*", use = ["edit", "reveal"] },
